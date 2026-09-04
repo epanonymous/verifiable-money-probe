@@ -1,0 +1,12 @@
+{
+  "tool": "base_usdc_verify",
+  "chain": "base-mainnet",
+  "wallet": "0x3B1e8faa51fE60A9fa466798693FAee33614f83F",
+  "usdc_balance": 0.0,
+  "settled": false,
+  "tx_confirmed": false,
+  "last_inbound_tx": null,
+  "tx_block": null,
+  "queried_block": 50720269,
+  "queried_at": 1788229885
+}

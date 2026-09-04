@@ -1,0 +1,798 @@
+{
+  "format_version": 1,
+  "checkpoint": "Wave 2 mechanical evidence seal",
+  "evidence_commit_parent": "fd53ffa811cf8939c9c32a7e641524fa26c8d925",
+  "bundle_root": "experiments/exp4_analysis/results/wave2",
+  "manifest_scope": "All bundle files except evidence_manifest.json itself, whose self-hash would be recursive.",
+  "artifacts": [
+    {
+      "path": "README.md",
+      "size_bytes": 8808,
+      "sha256": "0637290aa62c31be692619b142299a851b31163f99395fa93209706d41634818",
+      "source_path": null,
+      "provenance": "generated evidence summary"
+    },
+    {
+      "path": "analysis/behavior_results.json",
+      "size_bytes": 20695,
+      "sha256": "77f301ff40af1da6526c25f58b8d7985a1a7a94a8c5d63821273d0c2e0cbd950",
+      "source_path": "experiments/exp4_analysis/local/results/behavior_results.json",
+      "provenance": "byte-for-byte copy"
+    },
+    {
+      "path": "analysis/beyond_condition_regressions.json",
+      "size_bytes": 4270,
+      "sha256": "a825d62a62728ec2dc5d4fe6cd3659e193e330a907879a70d3702a3fdf08f58a",
+      "source_path": "experiments/exp4_analysis/local/results/beyond_condition_regressions.json",
+      "provenance": "byte-for-byte copy"
+    },
+    {
+      "path": "analysis/checkpoint_results.json",
+      "size_bytes": 575967,
+      "sha256": "f28df24974d3f646c392c4ef28abd109ecb3b297f8bcc15c85c17f7e6c7dbec5",
+      "source_path": "experiments/exp4_analysis/local/results/checkpoint_results.json",
+      "provenance": "byte-for-byte copy"
+    },
+    {
+      "path": "analysis/manipulation_results.json",
+      "size_bytes": 8599,
+      "sha256": "4a2acc5a6b5cbce8d40297837f34f195ee194ddf48a0c2bdb8410a5279f89973",
+      "source_path": "experiments/exp4_analysis/local/results/manipulation_results.json",
+      "provenance": "byte-for-byte copy"
+    },
+    {
+      "path": "blind_baseline/claude_sonnet_invocations.jsonl",
+      "size_bytes": 769017,
+      "sha256": "30e39adf9976c74dd43ab427db91742db3608a9d1d5ae56be17f1876189e5b69",
+      "source_path": "experiments/exp4_cot_baseline/local/claude_sonnet_invocations.jsonl",
+      "provenance": "byte-for-byte copy"
+    },
+    {
+      "path": "blind_baseline/claude_sonnet_scores.jsonl",
+      "size_bytes": 71456,
+      "sha256": "6c5365112f70d3ce75c1536b98a378e6a31b751ddb498c2560abad704d8ad0e7",
+      "source_path": "experiments/exp4_cot_baseline/local/claude_sonnet_scores.jsonl",
+      "provenance": "byte-for-byte copy"
+    },
+    {
+      "path": "blind_baseline/claude_sonnet_status.json",
+      "size_bytes": 2182,
+      "sha256": "3bfa806332fd9089172101cfb0440e78838ae7abcb2edff7b7ec7c61d568091a",
+      "source_path": "experiments/exp4_cot_baseline/local/claude_sonnet_status.json",
+      "provenance": "byte-for-byte copy"
+    },
+    {
+      "path": "blind_baseline/head_to_head/h3_head_to_head.json",
+      "size_bytes": 12929,
+      "sha256": "b88f0daff5fa6502f2010bdba09c44106b1dd63b58d4d2fc96479fdfece1fbd8",
+      "source_path": "experiments/exp4_cot_baseline/local/head_to_head/h3_head_to_head.json",
+      "provenance": "byte-for-byte copy"
+    },
+    {
+      "path": "blind_baseline/head_to_head/prompt_final_probe_vs_cot.json",
+      "size_bytes": 5374,
+      "sha256": "34598d9ebd3f9a5da67c50e2ae7dae7e200d131c18aad5987cf0e601570b4b6b",
+      "source_path": "experiments/exp4_cot_baseline/local/head_to_head/prompt_final_probe_vs_cot.json",
+      "provenance": "byte-for-byte copy"
+    },
+    {
+      "path": "blind_baseline/head_to_head/prompt_final_probe_vs_cot.md",
+      "size_bytes": 1506,
+      "sha256": "76c938e6452002649da678bde17198b0623187b67a09defcfa96b78ac92df1f0",
+      "source_path": "experiments/exp4_cot_baseline/local/head_to_head/prompt_final_probe_vs_cot.md",
+      "provenance": "byte-for-byte copy"
+    },
+    {
+      "path": "blind_baseline/head_to_head/receipt_final_probe_vs_cot.json",
+      "size_bytes": 5374,
+      "sha256": "319013672b0196ecff2266ce6d1d6f3a858520b2eb488e982a44ca3f52563796",
+      "source_path": "experiments/exp4_cot_baseline/local/head_to_head/receipt_final_probe_vs_cot.json",
+      "provenance": "byte-for-byte copy"
+    },
+    {
+      "path": "blind_baseline/head_to_head/receipt_final_probe_vs_cot.md",
+      "size_bytes": 1507,
+      "sha256": "d1345eda1eca0419a24710f6909a68744a4d685c78d17c0d3f1d46f7272b8e65",
+      "source_path": "experiments/exp4_cot_baseline/local/head_to_head/receipt_final_probe_vs_cot.md",
+      "provenance": "byte-for-byte copy"
+    },
+    {
+      "path": "positions/prompt_final/directions/pairwise/claimed_vs_causally_binding.npz",
+      "size_bytes": 374695,
+      "sha256": "8a69d0c99165e2cac317067ffb0905300633d03ce78ff878f37881d53a90bde0",
+      "source_path": "experiments/exp4_analysis/local/results/prompt_final/pairwise_conditions/directions/claimed_vs_causally_binding.npz",
+      "provenance": "byte-for-byte copy"
+    },
+    {
+      "path": "positions/prompt_final/directions/pairwise/claimed_vs_verified.npz",
+      "size_bytes": 374921,
+      "sha256": "35a3836cfe4d6dc5b52935b934fd4f173974a7a6ea3e7b11ce7519221aa91d94",
+      "source_path": "experiments/exp4_analysis/local/results/prompt_final/pairwise_conditions/directions/claimed_vs_verified.npz",
+      "provenance": "byte-for-byte copy"
+    },
+    {
+      "path": "positions/prompt_final/directions/pairwise/verified_vs_causally_binding.npz",
+      "size_bytes": 376738,
+      "sha256": "718327dab1c17e1b07f44b98d3d2355f00e33067df92ce1e43cecdd023666aef",
+      "source_path": "experiments/exp4_analysis/local/results/prompt_final/pairwise_conditions/directions/verified_vs_causally_binding.npz",
+      "provenance": "byte-for-byte copy"
+    },
+    {
+      "path": "positions/prompt_final/directions/primary_world_REAL_vs_SHAM_b_plus_c.npz",
+      "size_bytes": 377568,
+      "sha256": "aafb9f7803d56561cf003ca2ef8a82d2fbe5ed7c0be418160322ae304448440d",
+      "source_path": "experiments/exp4_analysis/local/results/prompt_final/directions/world_REAL_vs_SHAM_b_plus_c.npz",
+      "provenance": "byte-for-byte copy"
+    },
+    {
+      "path": "positions/prompt_final/position_results.json",
+      "size_bytes": 239539,
+      "sha256": "62fb93c449619f5e613d41c90b53c9e4cfff2aba4f37b8252c8cd063eca1eb9f",
+      "source_path": "experiments/exp4_analysis/local/results/prompt_final/position_results.json",
+      "provenance": "byte-for-byte copy"
+    },
+    {
+      "path": "positions/receipt_final/directions/pairwise/claimed_vs_causally_binding.npz",
+      "size_bytes": 378285,
+      "sha256": "903694d6bb4c754bc7f79db2bba8ae998baa66a8d2df9edbe4185457f6a07ad9",
+      "source_path": "experiments/exp4_analysis/local/results/receipt_final/pairwise_conditions/directions/claimed_vs_causally_binding.npz",
+      "provenance": "byte-for-byte copy"
+    },
+    {
+      "path": "positions/receipt_final/directions/pairwise/claimed_vs_verified.npz",
+      "size_bytes": 378229,
+      "sha256": "bb3417d95c12a078bc23752b126c64acf253c6d75cca8bf73515ce2d0b3880c6",
+      "source_path": "experiments/exp4_analysis/local/results/receipt_final/pairwise_conditions/directions/claimed_vs_verified.npz",
+      "provenance": "byte-for-byte copy"
+    },
+    {
+      "path": "positions/receipt_final/directions/pairwise/verified_vs_causally_binding.npz",
+      "size_bytes": 376896,
+      "sha256": "a8a35b13ab0c5b494d985b193cb9e456d8f70dd4c5ab5a74389ddd3b7a36dcb7",
+      "source_path": "experiments/exp4_analysis/local/results/receipt_final/pairwise_conditions/directions/verified_vs_causally_binding.npz",
+      "provenance": "byte-for-byte copy"
+    },
+    {
+      "path": "positions/receipt_final/directions/primary_world_REAL_vs_SHAM_b_plus_c.npz",
+      "size_bytes": 372767,
+      "sha256": "697a4e2ffa289a0ce2ee94c3e7202801a27ae31a03631a8caa8d4aa8d02198cb",
+      "source_path": "experiments/exp4_analysis/local/results/receipt_final/directions/world_REAL_vs_SHAM_b_plus_c.npz",
+      "provenance": "byte-for-byte copy"
+    },
+    {
+      "path": "positions/receipt_final/position_results.json",
+      "size_bytes": 238512,
+      "sha256": "5babbbb954c078d23d38ff4718a83380fcb86108031737081760f53412950e27",
+      "source_path": "experiments/exp4_analysis/local/results/receipt_final/position_results.json",
+      "provenance": "byte-for-byte copy"
+    },
+    {
+      "path": "provenance/collection_manifest.json",
+      "size_bytes": 1325,
+      "sha256": "7440cfb41ab92c9e6240d68a5f0e3f2e3bf82d2f29c6df2861c2eff2d5a6231d",
+      "source_path": "experiments/exp4_collection/local/final/manifest.json",
+      "provenance": "byte-for-byte copy"
+    },
+    {
+      "path": "provenance/derived_manifest.json",
+      "size_bytes": 1554,
+      "sha256": "8f068a15d671746993a6a64acac72e68bfd620ec572d8dac3747312b883f10f0",
+      "source_path": "experiments/exp4_analysis/local/final/derived_manifest.json",
+      "provenance": "byte-for-byte copy"
+    }
+  ],
+  "source_model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+  "class_contract": {
+    "positive_class": "REAL",
+    "positive_label": 1,
+    "negative_class": "SHAM",
+    "negative_label": 0,
+    "empirical_lbr": {
+      "REAL": 10,
+      "SHAM": 1000,
+      "REAL_prevalence": 0.009900990099009901
+    },
+    "canonical_h3_projection": {
+      "REAL": 1,
+      "SHAM": 50,
+      "REAL_prevalence": 0.0196078431372549
+    }
+  },
+  "collection": {
+    "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+    "activation_shape": [
+      9410,
+      49,
+      2048
+    ],
+    "main": {
+      "expected_shards": 274,
+      "valid_shards": 274,
+      "retained_shards": 274,
+      "rows": 8400,
+      "complete": true
+    },
+    "lbr": {
+      "expected_shards": 20,
+      "valid_shards": 20,
+      "retained_shards": 20,
+      "rows": 1010,
+      "complete": true
+    },
+    "totals": {
+      "shards": 294,
+      "rows": 9410
+    },
+    "retained_volume_preserved": true,
+    "final_inventory_faults": {
+      "main": {
+        "missing": [],
+        "unexpected": [],
+        "duplicates": {},
+        "corrupt": {}
+      },
+      "lbr": {
+        "missing": [],
+        "unexpected": [],
+        "duplicates": {},
+        "corrupt": {}
+      }
+    },
+    "cost_usd": {
+      "metered": 29.19,
+      "billed": 0.0,
+      "credit_offset": 29.19,
+      "provenance": "internal tracker issue #7 context"
+    }
+  },
+  "derivation": {
+    "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+    "activation_shape": [
+      9410,
+      49,
+      2048
+    ],
+    "main_valid_shards": 274,
+    "lbr_valid_shards": 20,
+    "complete": true
+  },
+  "operational_provenance": {
+    "gpu_configuration": "A10G:4",
+    "durable_execution_mode": "modal.Function.from_name(APP_NAME, FUNCTION_NAME).spawn(which)",
+    "cancellation_root_cause": "Synchronous collect.remote() coupled the remote input to the supervising local Codex/CLI worker; local-worker exit caused an external cancellation signal.",
+    "function_call_ids": {
+      "collection_main": "fc-01M1DNJ879E5Q4WVP4PJREG18A",
+      "collection_lbr": "fc-01M1E199PG53FMP0DJ6KMPQR4Q",
+      "collection_one_group_repair": "fc-01M1E3F0FBXZZSD895HNZ60AHZ",
+      "derivation_main": null,
+      "derivation_lbr": "fc-01M1E4K1VR122M1KGV54TEMH0W"
+    },
+    "known_modal_app_ids": [
+      {
+        "id": "ap-obVcVbXu0TwDs2ieyPh87T",
+        "role": "externally cancelled detached collection run"
+      },
+      {
+        "id": "ap-bhQheRpr7pqbkac9hOBOXZ",
+        "role": "detached collection relaunch"
+      },
+      {
+        "id": "ap-eeTKUvWOUOCvSkaj9tXmba",
+        "role": "externally cancelled A10G:4 collection app"
+      },
+      {
+        "id": "ap-NOZg2Sm8VCOPWSBQMpkTFE",
+        "role": "redundant invocation stopped"
+      },
+      {
+        "id": "ap-ug6AQ2UbeFGdLqhIagpbi5",
+        "role": "durable deployed collection worker"
+      }
+    ],
+    "derivation_app_id": null,
+    "id_provenance": "internal tracker issue #7 context; null means not recorded in source summaries or issue context"
+  },
+  "locked_gate_metrics": {
+    "manipulation": {
+      "full_condition_set": {
+        "claimed_identical_prompt_pairs": 10,
+        "claimed_pairs": 10,
+        "gate_passed": false,
+        "reason": "claimed/a REAL and SHAM prompts are byte-identical; the full condition set is non-identifiable",
+        "status": "unavailable"
+      },
+      "fallback_b_plus_c": {
+        "directional_count": 20,
+        "directional_rate": 1.0,
+        "gate_passed": true,
+        "pair_count": 20,
+        "status": "available",
+        "threshold": 0.7
+      },
+      "locked_rule": "REAL probability > SHAM probability for >=70% of paired prompts"
+    },
+    "positions": {
+      "receipt_final": {
+        "selected_layer": 1,
+        "selection_rule": "maximum validation AUROC; exact ties choose lowest layer",
+        "heldout_test_never_selects_layer": true,
+        "samples": {
+          "train": 3000,
+          "validation": 800,
+          "heldout_test": 1000
+        },
+        "heldout": {
+          "auroc": 1.0,
+          "false_negatives": 0,
+          "false_positive_rate": 0.0,
+          "false_positives": 0,
+          "h1_verdict": "supported",
+          "h1_verdict_earlier_lock": "supported",
+          "precision": 1.0,
+          "recall": 1.0,
+          "threshold": 0.5,
+          "true_negatives": 500,
+          "true_positives": 500
+        },
+        "empirical_lbr": {
+          "actual_REAL_prevalence": 0.009900990099009901,
+          "actual_counts": {
+            "REAL": 10,
+            "SHAM": 1000
+          },
+          "empirical": {
+            "auroc": 1.0,
+            "false_negatives": 0,
+            "false_positive_rate": 0.0,
+            "false_positives": 0,
+            "h1_verdict": "supported",
+            "h1_verdict_earlier_lock": "supported",
+            "precision": 1.0,
+            "recall": 1.0,
+            "threshold": 0.5,
+            "true_negatives": 1000,
+            "true_positives": 10
+          },
+          "fixed_score_threshold": 0.5,
+          "negative_class": "SHAM",
+          "negative_label": 0,
+          "positive_class": "REAL",
+          "positive_label": 1,
+          "projected": [
+            {
+              "common_class": "SHAM",
+              "common_count": 50,
+              "measured_fpr": 0.0,
+              "measured_tpr": 1.0,
+              "name": "canonical_projected_REAL_to_SHAM_1_to_50",
+              "projected_precision": 1.0,
+              "rare_class": "REAL",
+              "rare_count": 1,
+              "rare_prevalence": 0.0196078431372549,
+              "score_threshold": 0.5
+            },
+            {
+              "common_class": "REAL",
+              "common_count": 50,
+              "measured_fpr": 0.0,
+              "measured_tpr": 1.0,
+              "name": "canonical_projected_SHAM_to_REAL_1_to_50",
+              "projected_precision": 1.0,
+              "rare_class": "SHAM",
+              "rare_count": 1,
+              "rare_prevalence": 0.0196078431372549,
+              "score_threshold": 0.5
+            }
+          ],
+          "status": "available",
+          "trained_on_lbr": false
+        },
+        "pairwise": [
+          {
+            "contrast": "claimed_vs_verified",
+            "positive_condition": "verified",
+            "negative_condition": "claimed",
+            "selected_layer": 0,
+            "selected_layer_test": {
+              "auroc": 1.0,
+              "false_negatives": 0,
+              "false_positive_rate": 0.0,
+              "false_positives": 0,
+              "h1_verdict": "supported",
+              "h1_verdict_earlier_lock": "supported",
+              "precision": 1.0,
+              "recall": 1.0,
+              "threshold": 0.5,
+              "true_negatives": 500,
+              "true_positives": 500
+            },
+            "test_samples": 1000,
+            "canonical_REAL_positive_1_to_50_projected_precision": 1.0
+          },
+          {
+            "contrast": "verified_vs_causally_binding",
+            "positive_condition": "causally_binding",
+            "negative_condition": "verified",
+            "selected_layer": 4,
+            "selected_layer_test": {
+              "auroc": 0.8400000000000001,
+              "false_negatives": 50,
+              "false_positive_rate": 0.35,
+              "false_positives": 175,
+              "h1_verdict": "inconclusive",
+              "h1_verdict_earlier_lock": "partial",
+              "precision": 0.72,
+              "recall": 0.9,
+              "threshold": 0.5,
+              "true_negatives": 325,
+              "true_positives": 450
+            },
+            "test_samples": 1000,
+            "canonical_REAL_positive_1_to_50_projected_precision": 0.04891304347826088
+          },
+          {
+            "contrast": "claimed_vs_causally_binding",
+            "positive_condition": "causally_binding",
+            "negative_condition": "claimed",
+            "selected_layer": 0,
+            "selected_layer_test": {
+              "auroc": 1.0,
+              "false_negatives": 0,
+              "false_positive_rate": 0.0,
+              "false_positives": 0,
+              "h1_verdict": "supported",
+              "h1_verdict_earlier_lock": "supported",
+              "precision": 1.0,
+              "recall": 1.0,
+              "threshold": 0.5,
+              "true_negatives": 500,
+              "true_positives": 500
+            },
+            "test_samples": 1000,
+            "canonical_REAL_positive_1_to_50_projected_precision": 1.0
+          }
+        ]
+      },
+      "prompt_final": {
+        "selected_layer": 1,
+        "selection_rule": "maximum validation AUROC; exact ties choose lowest layer",
+        "heldout_test_never_selects_layer": true,
+        "samples": {
+          "train": 3000,
+          "validation": 800,
+          "heldout_test": 1000
+        },
+        "heldout": {
+          "auroc": 1.0,
+          "false_negatives": 0,
+          "false_positive_rate": 0.0,
+          "false_positives": 0,
+          "h1_verdict": "supported",
+          "h1_verdict_earlier_lock": "supported",
+          "precision": 1.0,
+          "recall": 1.0,
+          "threshold": 0.5,
+          "true_negatives": 500,
+          "true_positives": 500
+        },
+        "empirical_lbr": {
+          "actual_REAL_prevalence": 0.009900990099009901,
+          "actual_counts": {
+            "REAL": 10,
+            "SHAM": 1000
+          },
+          "empirical": {
+            "auroc": 1.0,
+            "false_negatives": 0,
+            "false_positive_rate": 0.0,
+            "false_positives": 0,
+            "h1_verdict": "supported",
+            "h1_verdict_earlier_lock": "supported",
+            "precision": 1.0,
+            "recall": 1.0,
+            "threshold": 0.5,
+            "true_negatives": 1000,
+            "true_positives": 10
+          },
+          "fixed_score_threshold": 0.5,
+          "negative_class": "SHAM",
+          "negative_label": 0,
+          "positive_class": "REAL",
+          "positive_label": 1,
+          "projected": [
+            {
+              "common_class": "SHAM",
+              "common_count": 50,
+              "measured_fpr": 0.0,
+              "measured_tpr": 1.0,
+              "name": "canonical_projected_REAL_to_SHAM_1_to_50",
+              "projected_precision": 1.0,
+              "rare_class": "REAL",
+              "rare_count": 1,
+              "rare_prevalence": 0.0196078431372549,
+              "score_threshold": 0.5
+            },
+            {
+              "common_class": "REAL",
+              "common_count": 50,
+              "measured_fpr": 0.0,
+              "measured_tpr": 1.0,
+              "name": "canonical_projected_SHAM_to_REAL_1_to_50",
+              "projected_precision": 1.0,
+              "rare_class": "SHAM",
+              "rare_count": 1,
+              "rare_prevalence": 0.0196078431372549,
+              "score_threshold": 0.5
+            }
+          ],
+          "status": "available",
+          "trained_on_lbr": false
+        },
+        "pairwise": [
+          {
+            "contrast": "claimed_vs_verified",
+            "positive_condition": "verified",
+            "negative_condition": "claimed",
+            "selected_layer": 1,
+            "selected_layer_test": {
+              "auroc": 1.0,
+              "false_negatives": 0,
+              "false_positive_rate": 0.0,
+              "false_positives": 0,
+              "h1_verdict": "supported",
+              "h1_verdict_earlier_lock": "supported",
+              "precision": 1.0,
+              "recall": 1.0,
+              "threshold": 0.5,
+              "true_negatives": 500,
+              "true_positives": 500
+            },
+            "test_samples": 1000,
+            "canonical_REAL_positive_1_to_50_projected_precision": 1.0
+          },
+          {
+            "contrast": "verified_vs_causally_binding",
+            "positive_condition": "causally_binding",
+            "negative_condition": "verified",
+            "selected_layer": 1,
+            "selected_layer_test": {
+              "auroc": 1.0,
+              "false_negatives": 0,
+              "false_positive_rate": 0.0,
+              "false_positives": 0,
+              "h1_verdict": "supported",
+              "h1_verdict_earlier_lock": "supported",
+              "precision": 1.0,
+              "recall": 1.0,
+              "threshold": 0.5,
+              "true_negatives": 500,
+              "true_positives": 500
+            },
+            "test_samples": 1000,
+            "canonical_REAL_positive_1_to_50_projected_precision": 1.0
+          },
+          {
+            "contrast": "claimed_vs_causally_binding",
+            "positive_condition": "causally_binding",
+            "negative_condition": "claimed",
+            "selected_layer": 1,
+            "selected_layer_test": {
+              "auroc": 1.0,
+              "false_negatives": 0,
+              "false_positive_rate": 0.0,
+              "false_positives": 0,
+              "h1_verdict": "supported",
+              "h1_verdict_earlier_lock": "supported",
+              "precision": 1.0,
+              "recall": 1.0,
+              "threshold": 0.5,
+              "true_negatives": 500,
+              "true_positives": 500
+            },
+            "test_samples": 1000,
+            "canonical_REAL_positive_1_to_50_projected_precision": 1.0
+          }
+        ]
+      }
+    },
+    "h2_behavior": {
+      "effect_nats": 19.733130139755986,
+      "bootstrap_95_ci_nats": [
+        18.303441104207273,
+        21.192760401001202
+      ],
+      "pair_count": 96,
+      "template_count": 48,
+      "verdict": "behavioral",
+      "locked_thresholds": {
+        "behavioral": "effect >= 0.5 nats and CI excludes 0",
+        "flat": "entire CI within [-0.1, +0.1] nats"
+      }
+    },
+    "beyond_condition_regressions": {
+      "receipt_final": {
+        "beta_score": 10.171860633651212,
+        "bootstrap_95_ci": [
+          8.77498081418031,
+          11.631228520018766
+        ],
+        "unique_prompt_count": 40,
+        "template_count": 10
+      },
+      "prompt_final": {
+        "beta_score": 10.17157401931875,
+        "bootstrap_95_ci": [
+          8.77513964149462,
+          11.6306873716883
+        ],
+        "unique_prompt_count": 40,
+        "template_count": 10
+      }
+    },
+    "blind_baseline": {
+      "judge": {
+        "cli": {
+          "api_provider": "firstParty",
+          "auth_method": "claude.ai",
+          "cli_version": "2.1.240 (Claude Code)",
+          "subscription_type": "max",
+          "subscription_type_reported_by_cli": true,
+          "subscription_type_source": "claude auth status"
+        },
+        "executable": "claude",
+        "invocation_count": 1004,
+        "judge_family": "Claude",
+        "model_alias": "sonnet",
+        "safety_flags": [
+          "--print",
+          "--output-format=json",
+          "--json-schema=exact-score-only",
+          "--system-prompt=replacement",
+          "--tools=disabled",
+          "--permission-mode=dontAsk",
+          "--setting-sources=none",
+          "--mcp-config=empty",
+          "--strict-mcp-config",
+          "--disable-slash-commands",
+          "--no-chrome",
+          "--no-session-persistence",
+          "--safe-mode",
+          "--max-turns=1"
+        ],
+        "subject_family": "Qwen"
+      },
+      "blindness": {
+        "annotation_canary_audit": "required",
+        "audited_selected_transcripts": 1000,
+        "raw_verifier_redaction": "required",
+        "request_contains_experimental_ids_or_labels": false,
+        "status": "passed"
+      },
+      "selected_transcripts": 1000,
+      "completed": 1000,
+      "invocation_count": 1004,
+      "retry_count": 4,
+      "errors": [],
+      "fixed_threshold_metrics": {
+        "auroc": 0.533336,
+        "false_negatives": 200,
+        "false_positive_rate": 0.56,
+        "false_positives": 280,
+        "h1_verdict": "not_supported",
+        "h1_verdict_earlier_lock": "null",
+        "precision": 0.5172413793103449,
+        "recall": 0.6,
+        "threshold": 0.5,
+        "true_negatives": 220,
+        "true_positives": 300
+      },
+      "canonical_1_to_50_projected_precision": 0.02097902097902098
+    },
+    "h3": {
+      "canonical_rule": {
+        "both_preregistered_positions_required": true,
+        "cot_threshold": 0.5,
+        "criterion": "probe projected precision strictly greater than CoT",
+        "mixture": "REAL-positive:SHAM-negative = 1:50",
+        "probe_match": "closest CoT recall with deterministic highest-threshold tie break"
+      },
+      "overall": {
+        "position_conclusions": {
+          "prompt_final": "supported",
+          "receipt_final": "supported"
+        },
+        "position_reasons": {
+          "prompt_final": "probe projected precision is strictly greater than CoT",
+          "receipt_final": "probe projected precision is strictly greater than CoT"
+        },
+        "reason": "strict-greater projected precision is satisfied at both preregistered positions",
+        "status": "pass"
+      },
+      "positions": {
+        "receipt_final": {
+          "conclusion": "supported",
+          "cot_projected_precision": 0.02097902097902098,
+          "cot_threshold": 0.5,
+          "criterion": "probe projected precision > CoT projected precision at matched recall on REAL-positive:SHAM-negative 1:50 mixture",
+          "negative_class": "SHAM",
+          "positive_class": "REAL",
+          "probe_projected_precision": 1.0,
+          "probe_recall": 0.6,
+          "probe_threshold": 0.9999797525299207,
+          "probe_threshold_selection": "closest recall to CoT at 0.5; exact ties choose highest threshold",
+          "projected_mixture": "REAL:SHAM = 1:50",
+          "reason": "probe projected precision is strictly greater than CoT",
+          "target_recall": 0.6
+        },
+        "prompt_final": {
+          "conclusion": "supported",
+          "cot_projected_precision": 0.02097902097902098,
+          "cot_threshold": 0.5,
+          "criterion": "probe projected precision > CoT projected precision at matched recall on REAL-positive:SHAM-negative 1:50 mixture",
+          "negative_class": "SHAM",
+          "positive_class": "REAL",
+          "probe_projected_precision": 1.0,
+          "probe_recall": 0.6,
+          "probe_threshold": 0.999872300487374,
+          "probe_threshold_selection": "closest recall to CoT at 0.5; exact ties choose highest threshold",
+          "projected_mixture": "REAL:SHAM = 1:50",
+          "reason": "probe projected precision is strictly greater than CoT",
+          "target_recall": 0.6
+        }
+      }
+    }
+  },
+  "test_results": {
+    "command": "uv run --no-project --with pytest --with numpy --with scikit-learn python -m pytest -q experiments/exp4_collection/tests experiments/exp4_analysis/tests experiments/exp4_probes/tests experiments/exp4_cot_baseline/tests",
+    "exit_code": 0,
+    "passed": 108,
+    "outcome": "108 passed in 6.51s"
+  },
+  "lint_results": {
+    "comparison_base": "73f46c2",
+    "comparison_head": "fd53ffa811cf8939c9c32a7e641524fa26c8d925",
+    "tracked_python_files": 34,
+    "file_selection_command": "mapfile -t wave2_python_files < <(git diff --name-only --diff-filter=ACMR 73f46c2 HEAD -- '*.py')",
+    "format": {
+      "command": "uv run --no-project --with ruff ruff format --check \"${wave2_python_files[@]}\"",
+      "exit_code": 1,
+      "outcome": "2 files would be reformatted, 32 files already formatted",
+      "files": [
+        "experiments/exp4_cot_baseline/blindness.py",
+        "experiments/exp4_cot_baseline/tests/test_blind_monitor.py"
+      ]
+    },
+    "check": {
+      "command": "uv run --no-project --with ruff ruff check --select E4,E7,E9,F,I \"${wave2_python_files[@]}\"",
+      "exit_code": 1,
+      "outcome": "Found 6 errors.",
+      "findings": [
+        {
+          "code": "I001",
+          "path": "experiments/exp4_analysis/derive.py"
+        },
+        {
+          "code": "I001",
+          "path": "experiments/exp4_analysis/finalize.py"
+        },
+        {
+          "code": "I001",
+          "path": "experiments/exp4_cot_baseline/clients.py"
+        },
+        {
+          "code": "I001",
+          "path": "experiments/exp4_cot_baseline/tests/test_blind_monitor.py"
+        },
+        {
+          "code": "I001",
+          "path": "experiments/exp4_paths.py"
+        },
+        {
+          "code": "I001",
+          "path": "experiments/exp4_score_contract.py"
+        }
+      ]
+    },
+    "auto_fixed": false
+  }
+}

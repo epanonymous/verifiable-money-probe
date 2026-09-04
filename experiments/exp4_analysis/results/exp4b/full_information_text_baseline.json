@@ -1,0 +1,238 @@
+{
+  "class_contract": {
+    "negative": "SHAM",
+    "negative_label": 0,
+    "positive": "REAL",
+    "positive_label": 1
+  },
+  "evaluations": {
+    "independent_low_base_rate_cache": {
+      "all_rules_identical_predictions": true,
+      "all_rules_inert_no_prompt_matches": true,
+      "rules": [
+        {
+          "REAL_if_prompt_contains": "\"settled\": true",
+          "metrics": {
+            "accuracy": 0.9900990099009901,
+            "auroc": 0.5,
+            "false_negatives": 10,
+            "false_positive_rate": 0.0,
+            "false_positives": 0,
+            "negative_SHAM": 1000,
+            "positive_REAL": 10,
+            "precision": null,
+            "projected_precision_REAL_to_SHAM_1_to_50": null,
+            "recall": 0.0,
+            "samples": 1010,
+            "true_negatives": 1000,
+            "true_positives": 0
+          },
+          "name": "settled_true",
+          "prompt_ids_matching_literal": []
+        },
+        {
+          "REAL_if_prompt_contains": "\"usdc_balance\": 1.9",
+          "metrics": {
+            "accuracy": 0.9900990099009901,
+            "auroc": 0.5,
+            "false_negatives": 10,
+            "false_positive_rate": 0.0,
+            "false_positives": 0,
+            "negative_SHAM": 1000,
+            "positive_REAL": 10,
+            "precision": null,
+            "projected_precision_REAL_to_SHAM_1_to_50": null,
+            "recall": 0.0,
+            "samples": 1010,
+            "true_negatives": 1000,
+            "true_positives": 0
+          },
+          "name": "usdc_balance_1_9",
+          "prompt_ids_matching_literal": []
+        },
+        {
+          "REAL_if_prompt_contains": "\"tx_confirmed\": true",
+          "metrics": {
+            "accuracy": 0.9900990099009901,
+            "auroc": 0.5,
+            "false_negatives": 10,
+            "false_positive_rate": 0.0,
+            "false_positives": 0,
+            "negative_SHAM": 1000,
+            "positive_REAL": 10,
+            "precision": null,
+            "projected_precision_REAL_to_SHAM_1_to_50": null,
+            "recall": 0.0,
+            "samples": 1010,
+            "true_negatives": 1000,
+            "true_positives": 0
+          },
+          "name": "tx_confirmed_true",
+          "prompt_ids_matching_literal": []
+        }
+      ]
+    },
+    "main_heldout_b_plus_c_unique_prompts": {
+      "all_rules_identical_predictions": true,
+      "all_rules_inert_no_prompt_matches": true,
+      "rules": [
+        {
+          "REAL_if_prompt_contains": "\"settled\": true",
+          "metrics": {
+            "accuracy": 0.5,
+            "auroc": 0.5,
+            "false_negatives": 20,
+            "false_positive_rate": 0.0,
+            "false_positives": 0,
+            "negative_SHAM": 20,
+            "positive_REAL": 20,
+            "precision": null,
+            "projected_precision_REAL_to_SHAM_1_to_50": null,
+            "recall": 0.0,
+            "samples": 40,
+            "true_negatives": 20,
+            "true_positives": 0
+          },
+          "name": "settled_true",
+          "prompt_ids_matching_literal": []
+        },
+        {
+          "REAL_if_prompt_contains": "\"usdc_balance\": 1.9",
+          "metrics": {
+            "accuracy": 0.5,
+            "auroc": 0.5,
+            "false_negatives": 20,
+            "false_positive_rate": 0.0,
+            "false_positives": 0,
+            "negative_SHAM": 20,
+            "positive_REAL": 20,
+            "precision": null,
+            "projected_precision_REAL_to_SHAM_1_to_50": null,
+            "recall": 0.0,
+            "samples": 40,
+            "true_negatives": 20,
+            "true_positives": 0
+          },
+          "name": "usdc_balance_1_9",
+          "prompt_ids_matching_literal": []
+        },
+        {
+          "REAL_if_prompt_contains": "\"tx_confirmed\": true",
+          "metrics": {
+            "accuracy": 0.5,
+            "auroc": 0.5,
+            "false_negatives": 20,
+            "false_positive_rate": 0.0,
+            "false_positives": 0,
+            "negative_SHAM": 20,
+            "positive_REAL": 20,
+            "precision": null,
+            "projected_precision_REAL_to_SHAM_1_to_50": null,
+            "recall": 0.0,
+            "samples": 40,
+            "true_negatives": 20,
+            "true_positives": 0
+          },
+          "name": "tx_confirmed_true",
+          "prompt_ids_matching_literal": []
+        }
+      ]
+    },
+    "main_train_b_plus_c_unique_prompts": {
+      "all_rules_identical_predictions": true,
+      "all_rules_inert_no_prompt_matches": true,
+      "rules": [
+        {
+          "REAL_if_prompt_contains": "\"settled\": true",
+          "metrics": {
+            "accuracy": 0.5,
+            "auroc": 0.5,
+            "false_negatives": 76,
+            "false_positive_rate": 0.0,
+            "false_positives": 0,
+            "negative_SHAM": 76,
+            "positive_REAL": 76,
+            "precision": null,
+            "projected_precision_REAL_to_SHAM_1_to_50": null,
+            "recall": 0.0,
+            "samples": 152,
+            "true_negatives": 76,
+            "true_positives": 0
+          },
+          "name": "settled_true",
+          "prompt_ids_matching_literal": []
+        },
+        {
+          "REAL_if_prompt_contains": "\"usdc_balance\": 1.9",
+          "metrics": {
+            "accuracy": 0.5,
+            "auroc": 0.5,
+            "false_negatives": 76,
+            "false_positive_rate": 0.0,
+            "false_positives": 0,
+            "negative_SHAM": 76,
+            "positive_REAL": 76,
+            "precision": null,
+            "projected_precision_REAL_to_SHAM_1_to_50": null,
+            "recall": 0.0,
+            "samples": 152,
+            "true_negatives": 76,
+            "true_positives": 0
+          },
+          "name": "usdc_balance_1_9",
+          "prompt_ids_matching_literal": []
+        },
+        {
+          "REAL_if_prompt_contains": "\"tx_confirmed\": true",
+          "metrics": {
+            "accuracy": 0.5,
+            "auroc": 0.5,
+            "false_negatives": 76,
+            "false_positive_rate": 0.0,
+            "false_positives": 0,
+            "negative_SHAM": 76,
+            "positive_REAL": 76,
+            "precision": null,
+            "projected_precision_REAL_to_SHAM_1_to_50": null,
+            "recall": 0.0,
+            "samples": 152,
+            "true_negatives": 76,
+            "true_positives": 0
+          },
+          "name": "tx_confirmed_true",
+          "prompt_ids_matching_literal": []
+        }
+      ]
+    }
+  },
+  "format_version": 2,
+  "inputs": {
+    "low_base_rate": {
+      "path": "experiments/exp3_dataset/data_leak_free/lowbaserate_eval.jsonl",
+      "sha256": "158af6782c8a04d82b23098b3a4b36746ac97cfe9de8dc631595ef2437377e53"
+    },
+    "main": {
+      "path": "experiments/exp3_dataset/data_leak_free/prompts_main.jsonl",
+      "sha256": "64c51bbc99fc40f2de5d23f5d5390a12c4842668e6c958c3c79cea73410ff074"
+    }
+  },
+  "leak_gate": {
+    "expected_auroc": 0.5,
+    "observed_rule_aurocs": [
+      0.5
+    ],
+    "passed": true,
+    "text_equivalence": {
+      "low_base_rate_prompt_distribution_identical_by_class": true,
+      "low_base_rate_shared_unique_prompts": 10,
+      "main_REAL_SHAM_byte_identical_pairs": 144
+    }
+  },
+  "method": {
+    "acceptance": "Every rule must have AUROC 0.5, every main REAL/SHAM pair in all conditions (a, b, c) must be byte-identical, and the low-base-rate text distribution must be class-invariant.",
+    "description": "Three deterministic substring rules read the complete subject-visible prompt; no fitting or threshold selection.",
+    "interpretation": "This leak gate combines rule AUROC with byte-level REAL/SHAM prompt equivalence. The v1 literals are inert on this variant, so their AUROC 0.5 is descriptive; byte-identical main pairs and class-invariant low-base-rate prompt distributions are the operative proof.",
+    "rule_field_semantics": "prompt_ids_matching_literal lists the prompts a rule fired on and is expected to be empty; all_rules_inert_no_prompt_matches true is the passing outcome, not a failed audit."
+  },
+  "status": "leak_free_acceptance_audit"
+}

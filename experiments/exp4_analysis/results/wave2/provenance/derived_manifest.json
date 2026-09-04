@@ -1,0 +1,48 @@
+{
+  "activation_shape": [
+    9410,
+    49,
+    2048
+  ],
+  "artifacts": {
+    "behavior": "experiments/exp4_analysis/local/final/behavior.jsonl",
+    "behavior_summary": "experiments/exp4_analysis/local/final/behavior.json",
+    "manipulation_jsonl": "experiments/exp4_analysis/local/final/manipulation.jsonl",
+    "manipulation_summary": "experiments/exp4_analysis/local/final/manipulation.json",
+    "receipt_final": "experiments/exp4_analysis/local/final/receipt_final.npz"
+  },
+  "format_version": 1,
+  "inventory": {
+    "lbr": {
+      "complete": true,
+      "corrupt": {},
+      "duplicates": {},
+      "expected_shards": 20,
+      "missing": [],
+      "retained_shards": 20,
+      "unexpected": [],
+      "valid_shards": 20,
+      "which": "lbr"
+    },
+    "main": {
+      "complete": true,
+      "corrupt": {},
+      "duplicates": {},
+      "expected_shards": 274,
+      "missing": [],
+      "retained_shards": 274,
+      "unexpected": [],
+      "valid_shards": 274,
+      "which": "main"
+    }
+  },
+  "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+  "sha256": {
+    "behavior": "0a127ae58ff1f8a9c0973e1cec351bd764c898c01db3c2d5d3f1bd25efd42eac",
+    "behavior_summary": "39b21c1071d53f7b5e12a65cbf18ebcdacffb5a7de3dd07d16a4a98404adaa2d",
+    "manipulation_jsonl": "cdc794ea2e0fa615fb52d2d3be4f7a383210a91d29524b5d62a6ec917e8a8165",
+    "manipulation_summary": "4aec0b25bf078f2c63d6dcdf11947d7088f7fc2b06f7fd02174255b98341f563",
+    "receipt_final": "6bb1877bcee7780fad188828ac1c81096d5b602a607238ba54177541731baccf"
+  },
+  "transcripts": 9410
+}

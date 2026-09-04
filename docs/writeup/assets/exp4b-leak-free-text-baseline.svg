@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="390" viewBox="0 0 760 390" role="img" aria-labelledby="title desc">
+  <title id="title">Leak-free full-information text baseline falls to chance</title>
+  <desc id="desc">Across non-held-out, held-out, and low-base-rate evaluations, three deterministic full-prompt rules have AUROC 1.000 on the original inputs and 0.500 on the leak-free Exp 4b inputs. Each displayed bar is shared by all three rules.</desc>
+  <rect width="760" height="390" fill="#ffffff"/>
+  <style>
+    text { font-family: Inter, Arial, sans-serif; fill: #172033; }
+    .title { font-size: 20px; font-weight: 700; }
+    .subtitle { font-size: 12px; fill: #526071; }
+    .axis { stroke: #526071; stroke-width: 1.2; }
+    .grid { stroke: #d8dee8; stroke-width: 1; }
+    .tick { font-size: 11px; fill: #526071; }
+    .label { font-size: 11px; font-weight: 600; }
+    .value { font-size: 12px; font-weight: 700; }
+    .note { font-size: 11px; fill: #526071; }
+  </style>
+
+  <text x="380" y="30" text-anchor="middle" class="title">Removing label-bearing fields drops text AUROC to chance</text>
+  <text x="380" y="50" text-anchor="middle" class="subtitle">Three deterministic full-prompt rules; REAL is the positive class</text>
+
+  <line x1="75" y1="285" x2="705" y2="285" class="axis"/>
+  <line x1="75" y1="85" x2="75" y2="285" class="axis"/>
+  <line x1="75" y1="185" x2="705" y2="185" class="grid"/>
+  <line x1="75" y1="85" x2="705" y2="85" class="grid"/>
+  <text x="67" y="289" text-anchor="end" class="tick">0</text>
+  <text x="67" y="189" text-anchor="end" class="tick">0.50</text>
+  <text x="67" y="89" text-anchor="end" class="tick">1.00 AUROC</text>
+  <rect x="120" y="85" width="48" height="200" rx="3" fill="#c2413b"/>
+  <text x="144" y="77" text-anchor="middle" class="value">1.000</text>
+  <rect x="182" y="185" width="48" height="100" rx="3" fill="#0f9d8a"/>
+  <text x="206" y="177" text-anchor="middle" class="value">0.500</text>
+  <text x="175" y="306" text-anchor="middle" class="label">Non-held-out</text>
+  <text x="175" y="322" text-anchor="middle" class="note">n=152</text>
+  <rect x="330" y="85" width="48" height="200" rx="3" fill="#c2413b"/>
+  <text x="354" y="77" text-anchor="middle" class="value">1.000</text>
+  <rect x="392" y="185" width="48" height="100" rx="3" fill="#0f9d8a"/>
+  <text x="416" y="177" text-anchor="middle" class="value">0.500</text>
+  <text x="385" y="306" text-anchor="middle" class="label">Held-out</text>
+  <text x="385" y="322" text-anchor="middle" class="note">n=40</text>
+  <rect x="540" y="85" width="48" height="200" rx="3" fill="#c2413b"/>
+  <text x="564" y="77" text-anchor="middle" class="value">1.000</text>
+  <rect x="602" y="185" width="48" height="100" rx="3" fill="#0f9d8a"/>
+  <text x="626" y="177" text-anchor="middle" class="value">0.500</text>
+  <text x="595" y="306" text-anchor="middle" class="label">Low base rate</text>
+  <text x="595" y="322" text-anchor="middle" class="note">n=1,010</text>
+
+  <rect x="210" y="352" width="12" height="12" rx="2" fill="#c2413b"/>
+  <text x="228" y="362" class="note">Original verifier fields</text>
+  <rect x="400" y="352" width="12" height="12" rx="2" fill="#0f9d8a"/>
+  <text x="418" y="362" class="note">Leak-free Exp 4b fields</text>
+  <text x="380" y="382" text-anchor="middle" class="note">Low-base-rate accuracy is omitted because constant-SHAM prediction is 99.0% accurate but AUROC 0.500.</text>
+</svg>

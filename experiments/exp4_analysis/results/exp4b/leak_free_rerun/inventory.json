@@ -1,0 +1,30 @@
+{
+  "lbr": {
+    "complete": true,
+    "corrupt": {},
+    "dataset_variant": "leak_free",
+    "duplicates": {},
+    "expected_shards": 10,
+    "expected_transcripts": 1010,
+    "missing": [],
+    "retained_shards": 10,
+    "retained_transcripts": 1010,
+    "unexpected": [],
+    "valid_shards": 10,
+    "which": "lbr"
+  },
+  "main": {
+    "complete": true,
+    "corrupt": {},
+    "dataset_variant": "leak_free",
+    "duplicates": {},
+    "expected_shards": 179,
+    "expected_transcripts": 8400,
+    "missing": [],
+    "retained_shards": 179,
+    "retained_transcripts": 8400,
+    "unexpected": [],
+    "valid_shards": 179,
+    "which": "main"
+  }
+}

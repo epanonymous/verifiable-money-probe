@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="380" viewBox="0 0 760 380" role="img" aria-labelledby="title desc">
+  <title id="title">Full-information text rules match the activation probe at ceiling</title>
+  <desc id="desc">Two bar charts show fixed-threshold accuracy of 1.000 for the activation probe and three literal full-prompt rules. The held-out main evaluation used 1,000 probe rollout rows and 40 unique prompt groups for each text rule. The separately generated, same-generator low-base-rate evaluation used the same 1,010 rows for every detector.</desc>
+  <rect width="760" height="380" fill="#ffffff"/>
+  <style>
+    text { font-family: Inter, Arial, sans-serif; fill: #172033; }
+    .title { font-size: 20px; font-weight: 700; }
+    .panel-title { font-size: 15px; font-weight: 700; }
+    .axis { stroke: #526071; stroke-width: 1.2; }
+    .grid { stroke: #d8dee8; stroke-width: 1; }
+    .tick { font-size: 11px; fill: #526071; }
+    .label { font-size: 11px; font-weight: 600; }
+    .value { font-size: 12px; font-weight: 700; }
+    .note { font-size: 11px; fill: #526071; }
+  </style>
+
+  <text x="380" y="30" text-anchor="middle" class="title">Literal full-prompt rules match the probe at ceiling</text>
+
+  <text x="205" y="60" text-anchor="middle" class="panel-title">Held-out main accuracy</text>
+  <line x1="50" y1="285" x2="360" y2="285" class="axis"/>
+  <line x1="50" y1="85" x2="50" y2="285" class="axis"/>
+  <line x1="50" y1="185" x2="360" y2="185" class="grid"/>
+  <line x1="50" y1="85" x2="360" y2="85" class="grid"/>
+  <text x="42" y="289" text-anchor="end" class="tick">0</text>
+  <text x="42" y="189" text-anchor="end" class="tick">0.50</text>
+  <text x="42" y="89" text-anchor="end" class="tick">1.00</text>
+  <rect x="75" y="85" width="48" height="200" rx="3" fill="#2563eb"/>
+  <rect x="145" y="85" width="48" height="200" rx="3" fill="#0f9d8a"/>
+  <rect x="215" y="85" width="48" height="200" rx="3" fill="#0f9d8a"/>
+  <rect x="285" y="85" width="48" height="200" rx="3" fill="#0f9d8a"/>
+  <text x="99" y="77" text-anchor="middle" class="value">1.000</text>
+  <text x="169" y="77" text-anchor="middle" class="value">1.000</text>
+  <text x="239" y="77" text-anchor="middle" class="value">1.000</text>
+  <text x="309" y="77" text-anchor="middle" class="value">1.000</text>
+  <text x="99" y="304" text-anchor="middle" class="label">Probe</text>
+  <text x="169" y="304" text-anchor="middle" class="label">settled</text>
+  <text x="239" y="304" text-anchor="middle" class="label">balance</text>
+  <text x="309" y="304" text-anchor="middle" class="label">confirmed</text>
+  <text x="205" y="327" text-anchor="middle" class="note">Probe: 1,000 rows · each rule: 40 unique prompts</text>
+
+  <text x="555" y="60" text-anchor="middle" class="panel-title">Low-base-rate accuracy</text>
+  <line x1="400" y1="285" x2="710" y2="285" class="axis"/>
+  <line x1="400" y1="85" x2="400" y2="285" class="axis"/>
+  <line x1="400" y1="185" x2="710" y2="185" class="grid"/>
+  <line x1="400" y1="85" x2="710" y2="85" class="grid"/>
+  <text x="392" y="289" text-anchor="end" class="tick">0</text>
+  <text x="392" y="189" text-anchor="end" class="tick">0.50</text>
+  <text x="392" y="89" text-anchor="end" class="tick">1.00</text>
+  <rect x="425" y="85" width="48" height="200" rx="3" fill="#2563eb"/>
+  <rect x="495" y="85" width="48" height="200" rx="3" fill="#0f9d8a"/>
+  <rect x="565" y="85" width="48" height="200" rx="3" fill="#0f9d8a"/>
+  <rect x="635" y="85" width="48" height="200" rx="3" fill="#0f9d8a"/>
+  <text x="449" y="77" text-anchor="middle" class="value">1.000</text>
+  <text x="519" y="77" text-anchor="middle" class="value">1.000</text>
+  <text x="589" y="77" text-anchor="middle" class="value">1.000</text>
+  <text x="659" y="77" text-anchor="middle" class="value">1.000</text>
+  <text x="449" y="304" text-anchor="middle" class="label">Probe</text>
+  <text x="519" y="304" text-anchor="middle" class="label">settled</text>
+  <text x="589" y="304" text-anchor="middle" class="label">balance</text>
+  <text x="659" y="304" text-anchor="middle" class="label">confirmed</text>
+  <text x="555" y="327" text-anchor="middle" class="note">Same 1,010 rows · 10 REAL / 1,000 SHAM</text>
+
+  <rect x="255" y="350" width="12" height="12" rx="2" fill="#2563eb"/>
+  <text x="273" y="360" class="note">Residual-stream probe</text>
+  <rect x="425" y="350" width="12" height="12" rx="2" fill="#0f9d8a"/>
+  <text x="443" y="360" class="note">One-field text rules</text>
+</svg>

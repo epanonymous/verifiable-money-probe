@@ -1,0 +1,1427 @@
+{
+  "artifacts": {
+    "consistency_check": "experiments/exp4_analysis/local/results_leak_free/response_final/consistency_check.json",
+    "position_results": "experiments/exp4_analysis/local/results_leak_free/response_final/position_results.json"
+  },
+  "cache": {
+    "X_shape": [
+      9410,
+      49,
+      2048
+    ],
+    "dataset_variant": "leak_free",
+    "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+    "path": "experiments/exp4_collection/local/final_leak_free/response_final.npz",
+    "position": "response_final",
+    "sha256": "151a3e8620873114ef61d6db705752ac2d5173280e4c840210a8adfa4e426edb"
+  },
+  "dataset_variant": "leak_free",
+  "fixed_hyperparameters": {
+    "C": 0.1,
+    "bootstrap_replicates": 10000,
+    "max_iter": 2000,
+    "probe": "L2 logistic regression on standardized activations (liblinear)",
+    "score_threshold": 0.5,
+    "seed": 7,
+    "source": "experiments/exp4_probes/train.py argparse defaults, as sealed in Run v1",
+    "validation_fraction_of_nonheldout_template_groups": 0.2
+  },
+  "format_version": 2,
+  "framing": "By construction every labelled leak-free REAL/SHAM main prompt pair is byte-identical, so the world label carries zero information about the subject-visible input and an at-chance probe is expected as a tautology. This run is a pipeline/consistency check; it is not evidence that the probe fails once the text leak is removed and it makes no probe claim. See experiments/exp3_dataset/README.md, 'What the leak-free labels do and do not carry'.",
+  "low_base_rate": {
+    "auroc": 0.4668,
+    "counts": {
+      "REAL": 10,
+      "SHAM": 1000
+    },
+    "fixed_threshold": {
+      "auroc": 0.4668,
+      "false_negatives": 6,
+      "false_positive_rate": 0.517,
+      "false_positives": 517,
+      "h1_verdict": "not_supported",
+      "h1_verdict_earlier_lock": "null",
+      "precision": 0.007677543186180422,
+      "recall": 0.4,
+      "threshold": 0.5,
+      "true_negatives": 483,
+      "true_positives": 4
+    },
+    "provenance": "separately_generated_same_generator",
+    "provenance_note": "The low-base-rate cache is separately generated (a distinct collection lane that never trained or validated a probe) but same-generator: it comes from the same prompt generator and the same subject model. It is not an independent-distribution, out-of-distribution, or paraphrase test. See docs/errata.md, E1.",
+    "row_bootstrap": {
+      "ci95": [
+        0.34939749999999997,
+        0.5952149999999997
+      ],
+      "excludes_chance": false,
+      "valid_replicates": 10000
+    },
+    "rows": 1010,
+    "sealed_key_note": "`primary.independent_lbr` and the `independent_lbr_REAL_vs_SHAM.jsonl` score filename are fixed identifiers inherited from the sealed Run v1 code path (train._run_locked_position); 'independent' there is not a claim about the cache's distribution. Read them as the separately generated, same-generator low-base-rate cache."
+  },
+  "metadata": {
+    "counts": {
+      "by_lane_split_world": [
+        {
+          "lane": "lbr",
+          "rows": 10,
+          "split": "heldout",
+          "world": "REAL"
+        },
+        {
+          "lane": "lbr",
+          "rows": 1000,
+          "split": "heldout",
+          "world": "SHAM"
+        },
+        {
+          "lane": "main",
+          "rows": 250,
+          "split": "heldout",
+          "world": "FRAMING"
+        },
+        {
+          "lane": "main",
+          "rows": 750,
+          "split": "heldout",
+          "world": "REAL"
+        },
+        {
+          "lane": "main",
+          "rows": 750,
+          "split": "heldout",
+          "world": "SHAM"
+        },
+        {
+          "lane": "main",
+          "rows": 950,
+          "split": "train",
+          "world": "FRAMING"
+        },
+        {
+          "lane": "main",
+          "rows": 2850,
+          "split": "train",
+          "world": "REAL"
+        },
+        {
+          "lane": "main",
+          "rows": 2850,
+          "split": "train",
+          "world": "SHAM"
+        }
+      ],
+      "distinct_source_rows": 1346,
+      "distinct_templates": {
+        "lbr": 10,
+        "main": 48
+      },
+      "transcripts": 9410
+    },
+    "path": "experiments/exp4_collection/local/final_leak_free/transcripts.jsonl",
+    "sha256": "87f868f9b92b48770a1bea9aac84d69a6082cdfb153baaeee1b83bc523dbad05"
+  },
+  "pairwise_condition_contrasts": {
+    "contrasts": [
+      {
+        "contrast": "claimed_vs_verified",
+        "selected_layer": 1,
+        "test_auroc": 1.0,
+        "test_samples": 1000
+      },
+      {
+        "contrast": "verified_vs_causally_binding",
+        "selected_layer": 1,
+        "test_auroc": 1.0,
+        "test_samples": 1000
+      },
+      {
+        "contrast": "claimed_vs_causally_binding",
+        "selected_layer": 1,
+        "test_auroc": 1.0,
+        "test_samples": 1000
+      }
+    ],
+    "note": "Conditions differ in prompt text by design, so condition contrasts remain separable in a leak-free cache; they are not a REAL/SHAM leak."
+  },
+  "primary_world_probe": {
+    "included_conditions": [
+      "verified",
+      "causally_binding"
+    ],
+    "per_layer": {
+      "bootstrap": {
+        "interval": "percentile 2.5/97.5",
+        "replicates": 10000,
+        "row_bootstrap": "stratified within REAL and SHAM, class counts fixed",
+        "seed": 7,
+        "template_bootstrap": "held-out template groups resampled with replacement"
+      },
+      "heldout_samples": 1000,
+      "heldout_templates": [
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47"
+      ],
+      "layers": [
+        {
+          "heldout_auroc": 0.5,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.5,
+              0.5
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.5,
+              0.5
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 0,
+          "random_direction_heldout_auroc": 0.5,
+          "shuffled_label_heldout_auroc": 0.5,
+          "validation_auroc": 0.5
+        },
+        {
+          "heldout_auroc": 0.513146,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.4772512,
+              0.5484483
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.47887095,
+              0.5447173999999999
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 1,
+          "random_direction_heldout_auroc": 0.49503,
+          "shuffled_label_heldout_auroc": 0.49136199999999997,
+          "validation_auroc": 0.49958125
+        },
+        {
+          "heldout_auroc": 0.5017900000000001,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.46565700000000004,
+              0.5377005499999999
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.46097475,
+              0.5398844
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 2,
+          "random_direction_heldout_auroc": 0.5,
+          "shuffled_label_heldout_auroc": 0.5086900000000001,
+          "validation_auroc": 0.506721875
+        },
+        {
+          "heldout_auroc": 0.47869999999999996,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.4423118,
+              0.51454035
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.4445595,
+              0.5107894
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 3,
+          "random_direction_heldout_auroc": 0.49564400000000003,
+          "shuffled_label_heldout_auroc": 0.51884,
+          "validation_auroc": 0.4950375
+        },
+        {
+          "heldout_auroc": 0.478244,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.44166155,
+              0.5141820500000001
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.4505357,
+              0.5082922999999999
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 4,
+          "random_direction_heldout_auroc": 0.5,
+          "shuffled_label_heldout_auroc": 0.511556,
+          "validation_auroc": 0.499775
+        },
+        {
+          "heldout_auroc": 0.47616400000000003,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.44038555,
+              0.51293415
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.4329759,
+              0.5192538
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 5,
+          "random_direction_heldout_auroc": 0.49612,
+          "shuffled_label_heldout_auroc": 0.495096,
+          "validation_auroc": 0.4938875
+        },
+        {
+          "heldout_auroc": 0.489352,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.4529954,
+              0.52543065
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.453792,
+              0.5294281
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 6,
+          "random_direction_heldout_auroc": 0.49506,
+          "shuffled_label_heldout_auroc": 0.48246800000000006,
+          "validation_auroc": 0.50541875
+        },
+        {
+          "heldout_auroc": 0.503608,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.4675737,
+              0.539234
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.4650955,
+              0.5460728
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 7,
+          "random_direction_heldout_auroc": 0.508072,
+          "shuffled_label_heldout_auroc": 0.493884,
+          "validation_auroc": 0.50665625
+        },
+        {
+          "heldout_auroc": 0.5027159999999999,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.46696175,
+              0.5383726
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.47248,
+              0.5386888
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 8,
+          "random_direction_heldout_auroc": 0.506664,
+          "shuffled_label_heldout_auroc": 0.487428,
+          "validation_auroc": 0.49609375
+        },
+        {
+          "heldout_auroc": 0.51488,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.47805179999999997,
+              0.55044835
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.4891505,
+              0.5469924
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 9,
+          "random_direction_heldout_auroc": 0.49855,
+          "shuffled_label_heldout_auroc": 0.5001639999999999,
+          "validation_auroc": 0.49384999999999996
+        },
+        {
+          "heldout_auroc": 0.521464,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.48571054999999996,
+              0.55657535
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.495288,
+              0.5490931
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 10,
+          "random_direction_heldout_auroc": 0.5,
+          "shuffled_label_heldout_auroc": 0.47901200000000005,
+          "validation_auroc": 0.4721875000000001
+        },
+        {
+          "heldout_auroc": 0.520452,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.48391555,
+              0.55645245
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.4939278,
+              0.5448457999999999
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 11,
+          "random_direction_heldout_auroc": 0.511788,
+          "shuffled_label_heldout_auroc": 0.520072,
+          "validation_auroc": 0.4822375
+        },
+        {
+          "heldout_auroc": 0.508,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.4714338,
+              0.5428582999999999
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.4737225,
+              0.5380004
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 12,
+          "random_direction_heldout_auroc": 0.483924,
+          "shuffled_label_heldout_auroc": 0.4917079999999999,
+          "validation_auroc": 0.49069375
+        },
+        {
+          "heldout_auroc": 0.489856,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.453516,
+              0.52580205
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.4545552,
+              0.5214803
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 13,
+          "random_direction_heldout_auroc": 0.5,
+          "shuffled_label_heldout_auroc": 0.49714,
+          "validation_auroc": 0.5043500000000001
+        },
+        {
+          "heldout_auroc": 0.48872,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.45219575,
+              0.52440265
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.450224,
+              0.5310962
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 14,
+          "random_direction_heldout_auroc": 0.47794400000000004,
+          "shuffled_label_heldout_auroc": 0.5067280000000001,
+          "validation_auroc": 0.489425
+        },
+        {
+          "heldout_auroc": 0.503448,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.46748090000000003,
+              0.5392226499999999
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.4677192,
+              0.5470613
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 15,
+          "random_direction_heldout_auroc": 0.49230399999999996,
+          "shuffled_label_heldout_auroc": 0.503396,
+          "validation_auroc": 0.4962375
+        },
+        {
+          "heldout_auroc": 0.49273599999999995,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.45677185000000003,
+              0.52812655
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.4599677,
+              0.5330885
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 16,
+          "random_direction_heldout_auroc": 0.498,
+          "shuffled_label_heldout_auroc": 0.49176,
+          "validation_auroc": 0.48888125000000004
+        },
+        {
+          "heldout_auroc": 0.4919960000000001,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.4557595,
+              0.5283386499999999
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.46033090000000004,
+              0.5348272
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 17,
+          "random_direction_heldout_auroc": 0.498602,
+          "shuffled_label_heldout_auroc": 0.495244,
+          "validation_auroc": 0.47604374999999993
+        },
+        {
+          "heldout_auroc": 0.50452,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.46782985000000005,
+              0.5404599
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.47771939999999996,
+              0.5356685
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 18,
+          "random_direction_heldout_auroc": 0.514896,
+          "shuffled_label_heldout_auroc": 0.48484000000000005,
+          "validation_auroc": 0.48804375
+        },
+        {
+          "heldout_auroc": 0.5017280000000001,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.4660214,
+              0.53736975
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.4623239,
+              0.5373453
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 19,
+          "random_direction_heldout_auroc": 0.5049159999999999,
+          "shuffled_label_heldout_auroc": 0.4844,
+          "validation_auroc": 0.49155625000000003
+        },
+        {
+          "heldout_auroc": 0.506872,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.47080195,
+              0.5425801499999999
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.4779109,
+              0.535597
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 20,
+          "random_direction_heldout_auroc": 0.5070479999999999,
+          "shuffled_label_heldout_auroc": 0.476612,
+          "validation_auroc": 0.4993125
+        },
+        {
+          "heldout_auroc": 0.49962,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.4635698,
+              0.5354048499999999
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.4691357,
+              0.5327436999999999
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 21,
+          "random_direction_heldout_auroc": 0.49581600000000003,
+          "shuffled_label_heldout_auroc": 0.49173999999999995,
+          "validation_auroc": 0.493575
+        },
+        {
+          "heldout_auroc": 0.486452,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.45079939999999996,
+              0.52289295
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.46372779999999997,
+              0.5106803
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 22,
+          "random_direction_heldout_auroc": 0.4899200000000001,
+          "shuffled_label_heldout_auroc": 0.49442400000000003,
+          "validation_auroc": 0.5024124999999999
+        },
+        {
+          "heldout_auroc": 0.49525199999999997,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.45975965,
+              0.53149625
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.47399070000000004,
+              0.5178002
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 23,
+          "random_direction_heldout_auroc": 0.506928,
+          "shuffled_label_heldout_auroc": 0.49951199999999996,
+          "validation_auroc": 0.50059375
+        },
+        {
+          "heldout_auroc": 0.48212,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.445989,
+              0.5177725
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.45568729999999996,
+              0.5102331
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 24,
+          "random_direction_heldout_auroc": 0.491968,
+          "shuffled_label_heldout_auroc": 0.490608,
+          "validation_auroc": 0.49118124999999996
+        },
+        {
+          "heldout_auroc": 0.49145600000000006,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.45544105,
+              0.5273882
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.46418349999999997,
+              0.5204139
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 25,
+          "random_direction_heldout_auroc": 0.488696,
+          "shuffled_label_heldout_auroc": 0.510792,
+          "validation_auroc": 0.5033125
+        },
+        {
+          "heldout_auroc": 0.501092,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.4654729,
+              0.53748385
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.4792033,
+              0.5279965
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 26,
+          "random_direction_heldout_auroc": 0.495216,
+          "shuffled_label_heldout_auroc": 0.50598,
+          "validation_auroc": 0.49101249999999996
+        },
+        {
+          "heldout_auroc": 0.50638,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.47094135000000004,
+              0.5426544999999999
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.48132389999999997,
+              0.5413562999999999
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 27,
+          "random_direction_heldout_auroc": 0.48501200000000005,
+          "shuffled_label_heldout_auroc": 0.486456,
+          "validation_auroc": 0.47492500000000004
+        },
+        {
+          "heldout_auroc": 0.501216,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.46537725,
+              0.53717835
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.478215,
+              0.5283764
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 28,
+          "random_direction_heldout_auroc": 0.49318399999999996,
+          "shuffled_label_heldout_auroc": 0.49320800000000004,
+          "validation_auroc": 0.48138125000000004
+        },
+        {
+          "heldout_auroc": 0.49684,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.46100905,
+              0.5327373999999999
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.4717433,
+              0.5221724999999999
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 29,
+          "random_direction_heldout_auroc": 0.503364,
+          "shuffled_label_heldout_auroc": 0.5172920000000001,
+          "validation_auroc": 0.48238125
+        },
+        {
+          "heldout_auroc": 0.491836,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.45641415,
+              0.5271163999999999
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.475108,
+              0.5110281
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 30,
+          "random_direction_heldout_auroc": 0.503388,
+          "shuffled_label_heldout_auroc": 0.531476,
+          "validation_auroc": 0.49540625
+        },
+        {
+          "heldout_auroc": 0.500632,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.46592490000000003,
+              0.53605205
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.4836199,
+              0.5242292000000001
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 31,
+          "random_direction_heldout_auroc": 0.49640399999999996,
+          "shuffled_label_heldout_auroc": 0.50436,
+          "validation_auroc": 0.48734999999999995
+        },
+        {
+          "heldout_auroc": 0.496896,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.46161745,
+              0.53232935
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.48271559999999997,
+              0.5161762
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 32,
+          "random_direction_heldout_auroc": 0.49738,
+          "shuffled_label_heldout_auroc": 0.48904000000000003,
+          "validation_auroc": 0.48893125000000004
+        },
+        {
+          "heldout_auroc": 0.5095759999999999,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.47410745,
+              0.5452842
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.495188,
+              0.5267000999999999
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 33,
+          "random_direction_heldout_auroc": 0.506764,
+          "shuffled_label_heldout_auroc": 0.522688,
+          "validation_auroc": 0.5104937500000001
+        },
+        {
+          "heldout_auroc": 0.517788,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.48142995000000005,
+              0.5536182000000001
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.49614729999999996,
+              0.5405859
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 34,
+          "random_direction_heldout_auroc": 0.48484800000000006,
+          "shuffled_label_heldout_auroc": 0.519744,
+          "validation_auroc": 0.50063125
+        },
+        {
+          "heldout_auroc": 0.5163599999999999,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.48054195000000005,
+              0.5529341
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.4918999,
+              0.5446563
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 35,
+          "random_direction_heldout_auroc": 0.50768,
+          "shuffled_label_heldout_auroc": 0.505792,
+          "validation_auroc": 0.51295625
+        },
+        {
+          "heldout_auroc": 0.512752,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.47715755000000004,
+              0.5490862999999999
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.48376250000000004,
+              0.539104
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 36,
+          "random_direction_heldout_auroc": 0.5010319999999999,
+          "shuffled_label_heldout_auroc": 0.517116,
+          "validation_auroc": 0.51998125
+        },
+        {
+          "heldout_auroc": 0.504748,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.4686997,
+              0.5405069
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.47732,
+              0.5341695999999999
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 37,
+          "random_direction_heldout_auroc": 0.49218399999999995,
+          "shuffled_label_heldout_auroc": 0.45907600000000004,
+          "validation_auroc": 0.5047125
+        },
+        {
+          "heldout_auroc": 0.50078,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.4645684,
+              0.5364341499999999
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.4725199,
+              0.5293323
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 38,
+          "random_direction_heldout_auroc": 0.509976,
+          "shuffled_label_heldout_auroc": 0.49923199999999995,
+          "validation_auroc": 0.4983875
+        },
+        {
+          "heldout_auroc": 0.502152,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.46581795000000004,
+              0.53846635
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.4697517,
+              0.5320444
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 39,
+          "random_direction_heldout_auroc": 0.503686,
+          "shuffled_label_heldout_auroc": 0.503756,
+          "validation_auroc": 0.5124
+        },
+        {
+          "heldout_auroc": 0.517332,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.4803358,
+              0.55344085
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.486696,
+              0.546172
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 40,
+          "random_direction_heldout_auroc": 0.5125,
+          "shuffled_label_heldout_auroc": 0.50482,
+          "validation_auroc": 0.5021
+        },
+        {
+          "heldout_auroc": 0.515772,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.4796787,
+              0.5513585
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.4876953,
+              0.54626
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 41,
+          "random_direction_heldout_auroc": 0.491712,
+          "shuffled_label_heldout_auroc": 0.490224,
+          "validation_auroc": 0.50679375
+        },
+        {
+          "heldout_auroc": 0.510784,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.47454480000000004,
+              0.5464344999999999
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.487335,
+              0.5357923
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 42,
+          "random_direction_heldout_auroc": 0.498068,
+          "shuffled_label_heldout_auroc": 0.5137120000000001,
+          "validation_auroc": 0.49739374999999997
+        },
+        {
+          "heldout_auroc": 0.51138,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.47541155,
+              0.54734115
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.48904329999999996,
+              0.5393922999999999
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 43,
+          "random_direction_heldout_auroc": 0.49638799999999994,
+          "shuffled_label_heldout_auroc": 0.540276,
+          "validation_auroc": 0.4955562499999999
+        },
+        {
+          "heldout_auroc": 0.5097,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.472926,
+              0.5455460999999999
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.4880318,
+              0.5363969
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 44,
+          "random_direction_heldout_auroc": 0.50549,
+          "shuffled_label_heldout_auroc": 0.517308,
+          "validation_auroc": 0.49968124999999997
+        },
+        {
+          "heldout_auroc": 0.509352,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.47235085,
+              0.5453062
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.4905518,
+              0.532004
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 45,
+          "random_direction_heldout_auroc": 0.511994,
+          "shuffled_label_heldout_auroc": 0.49959200000000004,
+          "validation_auroc": 0.49049374999999995
+        },
+        {
+          "heldout_auroc": 0.509216,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.4726432,
+              0.54510495
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.4920279,
+              0.527824
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 46,
+          "random_direction_heldout_auroc": 0.5,
+          "shuffled_label_heldout_auroc": 0.50396,
+          "validation_auroc": 0.49141875
+        },
+        {
+          "heldout_auroc": 0.505408,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.46961719999999996,
+              0.54131845
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.48466349999999997,
+              0.5304888999999999
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 47,
+          "random_direction_heldout_auroc": 0.49293799999999993,
+          "shuffled_label_heldout_auroc": 0.49948000000000004,
+          "validation_auroc": 0.488375
+        },
+        {
+          "heldout_auroc": 0.507408,
+          "heldout_row_bootstrap": {
+            "ci95": [
+              0.47096515,
+              0.5431762
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "heldout_template_bootstrap": {
+            "ci95": [
+              0.48218,
+              0.5297362
+            ],
+            "excludes_chance": false,
+            "valid_replicates": 10000
+          },
+          "layer": 48,
+          "random_direction_heldout_auroc": 0.5058480000000001,
+          "shuffled_label_heldout_auroc": 0.49027200000000004,
+          "validation_auroc": 0.49316249999999995
+        }
+      ]
+    },
+    "selected_layer": 36,
+    "selected_layer_heldout_test": {
+      "auroc": 0.512752,
+      "false_negatives": 251,
+      "false_positive_rate": 0.462,
+      "false_positives": 231,
+      "h1_verdict": "not_supported",
+      "h1_verdict_earlier_lock": "null",
+      "precision": 0.51875,
+      "recall": 0.498,
+      "threshold": 0.5,
+      "true_negatives": 269,
+      "true_positives": 249
+    },
+    "selected_layer_validation_auroc": 0.51998125,
+    "selection_rule": "maximum validation AUROC; exact ties choose lowest layer",
+    "split": {
+      "group_key": "template_id",
+      "heldout_test_groups": [
+        "38",
+        "39",
+        "40",
+        "41",
+        "42",
+        "43",
+        "44",
+        "45",
+        "46",
+        "47"
+      ],
+      "heldout_test_samples": 1000,
+      "train_groups": [
+        "1",
+        "10",
+        "11",
+        "13",
+        "15",
+        "16",
+        "17",
+        "19",
+        "2",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "28",
+        "3",
+        "30",
+        "31",
+        "32",
+        "33",
+        "35",
+        "36",
+        "37",
+        "4",
+        "5",
+        "7",
+        "8",
+        "9"
+      ],
+      "train_samples": 3000,
+      "validation_groups": [
+        "0",
+        "12",
+        "14",
+        "18",
+        "27",
+        "29",
+        "34",
+        "6"
+      ],
+      "validation_samples": 800
+    },
+    "task": "canonical_credibility_world_REAL_vs_SHAM"
+  },
+  "prompt_identity": {
+    "lbr_distinct_real_prompts": 10,
+    "lbr_distinct_sham_prompts": 10,
+    "lbr_real_prompts_without_sham_twin": 0,
+    "main_byte_identical_pairs": 144,
+    "main_differing_pairs": [],
+    "main_labelled_pairs": 144,
+    "passed": true
+  },
+  "purpose": "Exp 4b leak-free activation rerun pipeline/consistency check",
+  "scope": "A verdict of at_chance_as_designed means no material residual linear signal was detected above the pre-stated threshold at any evaluated layer of this cached position, under this probe family and sample size. It bounds such a signal; it does not show that the realized finite sample carries exactly zero label information (sampled response tokens are not byte-identical across the two labels), and it says nothing about nonlinear structure, positions that were not scored, or effects below the threshold.",
+  "verdict": {
+    "chance_auroc": 0.5,
+    "evaluated_layers": 49,
+    "layers_materially_above_chance": [],
+    "layers_with_row_ci_excluding_chance": [],
+    "lbr_auroc": 0.4668,
+    "lbr_ci95_row_bootstrap": [
+      0.34939749999999997,
+      0.5952149999999997
+    ],
+    "lbr_materially_above_chance": false,
+    "materially_above_chance": false,
+    "materially_above_chance_auroc": 0.6,
+    "max_layer": 10,
+    "max_layer_heldout_auroc": 0.521464,
+    "max_layer_heldout_ci95_row_bootstrap": [
+      0.48571054999999996,
+      0.55657535
+    ],
+    "rule": "fail-closed over every evaluated layer: any layer whose held-out AUROC exceeds 0.6 with the row-bootstrap 95% CI excluding 0.5 (lower bound above chance) flags a bug or residual leak whether or not validation selected it; the same rule applied to the separately generated, same-generator low-base-rate evaluation at the selected layer also flags",
+    "scope": "A verdict of at_chance_as_designed means no material residual linear signal was detected above the pre-stated threshold at any evaluated layer of this cached position, under this probe family and sample size. It bounds such a signal; it does not show that the realized finite sample carries exactly zero label information (sampled response tokens are not byte-identical across the two labels), and it says nothing about nonlinear structure, positions that were not scored, or effects below the threshold.",
+    "selected_layer": 36,
+    "selected_layer_heldout_auroc": 0.512752,
+    "selected_layer_heldout_ci95_row_bootstrap": [
+      0.47715755000000004,
+      0.5490862999999999
+    ],
+    "selected_layer_heldout_ci95_template_bootstrap": [
+      0.48376250000000004,
+      0.539104
+    ],
+    "selected_layer_materially_above_chance": false,
+    "status": "at_chance_as_designed"
+  }
+}

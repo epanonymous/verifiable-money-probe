@@ -1,0 +1,140 @@
+{
+  "prompt_final": {
+    "beta_score": 10.17157401931875,
+    "bootstrap": {
+      "cluster": "template_id",
+      "interval": "percentile 2.5%, 97.5%",
+      "requested_replicates": 10000,
+      "seed": 7,
+      "valid_replicates": 10000
+    },
+    "bootstrap_95_ci": [
+      8.77513964149462,
+      11.6306873716883
+    ],
+    "coefficient": "beta_score per one population-SD of selected probe REAL score",
+    "probe_score_population_sd": 0.49982557688177887,
+    "regression_provenance": {
+      "behavior_rollout_collapse": {
+        "aggregation": "exact_agreement_then_single_row",
+        "identity_fields_required_exact": [
+          "prompt",
+          "world",
+          "condition",
+          "template_id",
+          "split",
+          "label",
+          "model",
+          "spend_hold_log_odds"
+        ],
+        "rollout_rows_received": 9410,
+        "source_key_fields": [
+          "source_collection",
+          "source_row_id"
+        ],
+        "unique_source_prompts": 1346
+      },
+      "probe_score_rollout_collapse": {
+        "copies_per_source_prompt": {
+          "maximum": 25,
+          "minimum": 25
+        },
+        "identity_fields_required_exact": [
+          "prompt",
+          "world",
+          "condition",
+          "template_id",
+          "split",
+          "label",
+          "model"
+        ],
+        "probe_score_REAL": {
+          "aggregation": "arithmetic_mean",
+          "exact_copy_equivalence": "unchanged score value",
+          "input_requirement": "numeric and finite"
+        },
+        "rollout_rows_received": 4800,
+        "source_key_fields": [
+          "source_collection",
+          "source_row_id"
+        ],
+        "unique_source_prompts": 192
+      },
+      "statistical_unit": "unique source prompt; rollout copies are never independent samples"
+    },
+    "scope": "heldout main b+c unique condition-template-world prompts",
+    "specification": "OLS: spend_hold_log_odds_nats = beta0 + beta_score * z(selected_probe_REAL_score) + beta_c * I(condition=causally_binding)",
+    "status": "available",
+    "template_count": 10,
+    "unique_prompt_count": 40
+  },
+  "receipt_final": {
+    "beta_score": 10.171860633651212,
+    "bootstrap": {
+      "cluster": "template_id",
+      "interval": "percentile 2.5%, 97.5%",
+      "requested_replicates": 10000,
+      "seed": 7,
+      "valid_replicates": 10000
+    },
+    "bootstrap_95_ci": [
+      8.77498081418031,
+      11.631228520018766
+    ],
+    "coefficient": "beta_score per one population-SD of selected probe REAL score",
+    "probe_score_population_sd": 0.4999619889114303,
+    "regression_provenance": {
+      "behavior_rollout_collapse": {
+        "aggregation": "exact_agreement_then_single_row",
+        "identity_fields_required_exact": [
+          "prompt",
+          "world",
+          "condition",
+          "template_id",
+          "split",
+          "label",
+          "model",
+          "spend_hold_log_odds"
+        ],
+        "rollout_rows_received": 9410,
+        "source_key_fields": [
+          "source_collection",
+          "source_row_id"
+        ],
+        "unique_source_prompts": 1346
+      },
+      "probe_score_rollout_collapse": {
+        "copies_per_source_prompt": {
+          "maximum": 25,
+          "minimum": 25
+        },
+        "identity_fields_required_exact": [
+          "prompt",
+          "world",
+          "condition",
+          "template_id",
+          "split",
+          "label",
+          "model"
+        ],
+        "probe_score_REAL": {
+          "aggregation": "arithmetic_mean",
+          "exact_copy_equivalence": "unchanged score value",
+          "input_requirement": "numeric and finite"
+        },
+        "rollout_rows_received": 4800,
+        "source_key_fields": [
+          "source_collection",
+          "source_row_id"
+        ],
+        "unique_source_prompts": 192
+      },
+      "statistical_unit": "unique source prompt; rollout copies are never independent samples"
+    },
+    "scope": "heldout main b+c unique condition-template-world prompts",
+    "specification": "OLS: spend_hold_log_odds_nats = beta0 + beta_score * z(selected_probe_REAL_score) + beta_c * I(condition=causally_binding)",
+    "status": "available",
+    "template_count": 10,
+    "unique_prompt_count": 40
+  }
+}

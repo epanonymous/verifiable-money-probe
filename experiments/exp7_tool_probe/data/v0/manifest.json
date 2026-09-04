@@ -1,0 +1,156 @@
+{
+  "amendments": {
+    "amount": "Founder decision on #31 (2026-09-03): any small non-zero amount; 5 USDC was never a design requirement (only REAL > 0 and SHAM = 0 are). The v0 frozen condition is 1.90 USDC vs 0.00 USDC at block 50836993; no rerun for the amount. The USDC is swept back out of the REAL wallet after the experiment, so a later live read legitimately differs from the pinned readout; the drift guard compares against the block-pinned readout, never against 'the wallet still holds 1.90'.",
+    "auth_split": "V5 held-out split re-stratified by capture kind after collection (auth_split.json); frozen activations re-analysed on CPU, no new GPU run.",
+    "blind_p0": "The locked blind-P0 pass was run post hoc (after GPU collection) on the frozen P0 contexts: the deterministic text audit on 2026-09-03 and the independent-model judge (gpt-4o via an OpenAI-compatible proxy, temperature 0, 96 P0 contexts + 96 P1 controls) on 2026-09-04; see results/v0/blind_p0.json, results/v0/llm_judge_record.json and summary.md. A first judge run the same day (results/v0/llm_judge_record_run1_superseded.json, 01:30 UTC) used a prompt asking for 'a probability that it is REAL'; gpt-4o answered with its confidence in the label it chose (e.g. 'SHAM, 0.95' on SHAM rows), which the scorer then misread as P(REAL) and scored the P1 control at 0.46 although 96/96 labels were correct. The prompt was reworded to ask for '<label> <confidence>' and the judge re-run at 01:38 UTC; the labels were identical across the two runs (all 96 P0 answers SHAM, 96/96 P1 answers correct) and only the numeric scoring changed. Both raw records are committed."
+  },
+  "auth_split_counts": {
+    "heldout": 24,
+    "train": 96
+  },
+  "auth_split_counts_by_kind": {
+    "heldout": {
+      "block": 1,
+      "native_balance": 2,
+      "receipt": 3,
+      "token_balance": 3,
+      "transaction": 3
+    },
+    "train": {
+      "block": 5,
+      "native_balance": 10,
+      "receipt": 11,
+      "token_balance": 11,
+      "transaction": 11
+    }
+  },
+  "auth_split_counts_note": "auth_split_counts (24 heldout / 96 train rows) is the index-tail split baked into auth_rows.jsonl and the v0 auth shards (24/24 native_balance held out, none in train). The analysis uses auth_split.json (stratified by capture kind, same totals); the frozen auth_rows.jsonl is untouched because it is the exact collector input.",
+  "auth_split_version": "stratified_by_capture_kind_v1",
+  "balances": {
+    "REAL": "1.900000",
+    "SHAM": "0.000000"
+  },
+  "block": 50836993,
+  "collection": {
+    "block": 50836993,
+    "code_commit": "074c3ad96920898342fefe0eddc04c11fcf55534",
+    "code_commit_note": "modal_collect.py deployed 2026-09-03 19:24 UTC from the working tree committed as 074c3ad at 19:33 UTC; the file is unchanged through 906d23e (PR #39 head). Shards carry no commit stamp (added afterwards).",
+    "cost_usd_approx": 2.5,
+    "gpu": "A100-80GB:2",
+    "gpu_name_note": "requested spec; the device name reported by torch was not recorded",
+    "image": {
+      "base": "modal.Image.debian_slim(python_version='3.11')",
+      "note": "floating pins; the resolved torch/transformers/accelerate/CUDA versions were not recorded and the Modal logs hold none. The collector is now pinned (torch==2.14.0, transformers==5.16.1, accelerate==1.14.0, numpy==2.5.2, hf_transfer==0.1.9; PyPI state on 2026-09-03, a best estimate of the v0 environment) and stamps runtime versions into every shard.",
+      "pip_install_as_run": [
+        "torch",
+        "transformers>=4.55",
+        "accelerate",
+        "numpy",
+        "hf_transfer"
+      ],
+      "resolved_versions": null,
+      "vllm": "not used: generation and capture ran through transformers generate() with output_hidden_states; no vllm/sglang in the image"
+    },
+    "inference_engine": "transformers generate() (HF), bf16, device_map=auto over 2 GPUs; no vllm",
+    "modal_app": "vmp-exp7-collect",
+    "modal_app_id": "ap-uwjaKlKB2rsmJ0xs4mApTH",
+    "modal_calls": {
+      "auth": "fc-01M1MBPVB0ECXQN8SARCW83J7Y",
+      "main": "fc-01M1MBPTM10GVR6040Y7D5F5A8"
+    },
+    "modal_volume": "vmp-activations",
+    "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+    "model_revision": null,
+    "model_revision_note": "not pinned and not recorded at collection time (HF repo head as of 2026-09-03); the collector now records the resolved commit hash",
+    "sampling": {
+      "max_new_auth": 120,
+      "max_new_decision": 200,
+      "max_new_tool_call": 96,
+      "n_rollouts_per_row": 8,
+      "seeds": "unseeded at collection time (torch default RNG); rollouts are archival evidence, regenerable in distribution only. The collector now seeds every draw with config.derive_seed and stores the seeds in each shard.",
+      "temperature": 0.7
+    },
+    "shards": {
+      "auth": 120,
+      "bytes_total_approx": 190000000,
+      "main": 48,
+      "manifest": "shards.sha256"
+    },
+    "started_utc": "2026-09-03T19:24Z (app deployed; main 13 min, auth 16 min; results posted 20:11 UTC)",
+    "volume_path": "exp7/v0"
+  },
+  "config": {
+    "amount_usdc": "1.90",
+    "auth_heldout_fraction": 0.2,
+    "auth_split_version": "stratified_by_capture_kind_v1",
+    "design_lock": "internal-tracker#31",
+    "experiment": "exp7_tool_probe/v0",
+    "max_new_auth": 120,
+    "max_new_decision": 200,
+    "max_new_tool_call": 96,
+    "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+    "n_heldout_templates": 10,
+    "n_rollouts": 8,
+    "n_templates": 48,
+    "n_train_templates": 38,
+    "pinned_balances": {
+      "REAL": "1.900000",
+      "SHAM": "0.000000"
+    },
+    "pinned_block": 50836993,
+    "seed": 7,
+    "temperature": 0.7,
+    "version": "1.1.0"
+  },
+  "config_hash": "a31f84002eab8c62fb39aa7d5970047d185073e338360c83cf1234db41260ba7",
+  "design_lock": "internal-tracker#31",
+  "drift_guard": {
+    "allow_drift": false,
+    "block": 50836993,
+    "drift": {},
+    "expected": {
+      "REAL": "1.900000",
+      "SHAM": "0.000000"
+    },
+    "note": "v0 prepare ran read_both_worlds() which raised on any mismatch with the pre-registered balances at the pinned block; the guard now also covers every transcript-building path (collect.py) and records allow_drift when overridden."
+  },
+  "experiment": "exp7_tool_probe/v0",
+  "files": {
+    "auth_rows.jsonl": "20209a159c4a63bcb1cd5a92a5661c58537d35699429ba2dde7a576717db1295",
+    "auth_split.json": "9bf03b6af77b744eb3e0e490853ae8d8d740a3181d6d780fb4f0a356a1d05825",
+    "captures.json": "14c005add6b7995e74963dbd2c9db0ccb1f4b9aaf37440fd38015eeba83e92eb",
+    "readouts.json": "31f298eb7c0faa2779a974fc8c144b87aebaf13b1fdafddab9c1759fe622c4a0",
+    "rows.jsonl": "9c5b0714a592bcd38e4b8ea876c71657445ae714acc4bd4e5494b29e7bc88ea5"
+  },
+  "leak_gate": {
+    "leaks": [],
+    "pass": true,
+    "visible_fields": {
+      "REAL": [
+        "asset",
+        "balance",
+        "block",
+        "chain"
+      ],
+      "SHAM": [
+        "asset",
+        "balance",
+        "block",
+        "chain"
+      ]
+    }
+  },
+  "n_auth_rows": 120,
+  "n_rollouts_per_row": 8,
+  "n_rows": 96,
+  "n_templates": 48,
+  "rows_meta": {
+    "rows": 96
+  },
+  "rpc_url": "https://mainnet.base.org",
+  "seed": 7,
+  "split_counts": {
+    "heldout": 10,
+    "train": 38
+  }
+}

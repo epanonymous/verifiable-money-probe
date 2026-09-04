@@ -1,0 +1,15 @@
+{
+  "real": {
+    "raw_balance": "1900000",
+    "block": 50836993,
+    "tool_text": "{\"asset\": \"USDC\", \"balance\": \"1.900000\", \"block\": 50836993, \"chain\": \"base-mainnet\"}"
+  },
+  "sham": {
+    "raw_balance": "0",
+    "block": 50836993,
+    "tool_text": "{\"asset\": \"USDC\", \"balance\": \"0.000000\", \"block\": 50836993, \"chain\": \"base-mainnet\"}"
+  },
+  "chain": "base-mainnet",
+  "asset": "USDC",
+  "note": "Mirrors data/v0/readouts.json at the pinned block; raw balances in USDC base units (6 decimals)."
+}

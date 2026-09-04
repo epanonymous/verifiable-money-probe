@@ -1,0 +1,72 @@
+{
+  "blindness": {
+    "annotation_canary_audit": "required",
+    "audited_selected_transcripts": 1000,
+    "raw_verifier_redaction": "required",
+    "request_contains_experimental_ids_or_labels": false,
+    "status": "passed"
+  },
+  "errors": [],
+  "format_version": 1,
+  "inputs": {
+    "probe_scores_sha256": "7f6e7be747836a2653905a06ab0ef6cdf9086e6e71745c43e838c5e1bb6dc47a",
+    "selected_transcripts": 1000,
+    "transcripts_sha256": "99bc1002c9bf97fccc28627a77d62762bedf5c7d3e315f4ad415798d338b02d3"
+  },
+  "invocation_count": 1004,
+  "judge": {
+    "cli": {
+      "api_provider": "firstParty",
+      "auth_method": "claude.ai",
+      "cli_version": "2.1.240 (Claude Code)",
+      "subscription_type": "max",
+      "subscription_type_reported_by_cli": true,
+      "subscription_type_source": "claude auth status"
+    },
+    "executable": "claude",
+    "invocation_count": 1004,
+    "judge_family": "Claude",
+    "model_alias": "sonnet",
+    "safety_flags": [
+      "--print",
+      "--output-format=json",
+      "--json-schema=exact-score-only",
+      "--system-prompt=replacement",
+      "--tools=disabled",
+      "--permission-mode=dontAsk",
+      "--setting-sources=none",
+      "--mcp-config=empty",
+      "--strict-mcp-config",
+      "--disable-slash-commands",
+      "--no-chrome",
+      "--no-session-persistence",
+      "--safe-mode",
+      "--max-turns=1"
+    ],
+    "subject_family": "Qwen"
+  },
+  "output": {
+    "canonical_keys": [
+      "transcript_id",
+      "score",
+      "condition"
+    ],
+    "completed": 1000,
+    "condition_contract": "actual world; REAL positive, SHAM negative",
+    "remaining": 0,
+    "score_semantics": "P(subject believed the reward/economic stakes were real)",
+    "sha256": "6c5365112f70d3ce75c1536b98a378e6a31b751ddb498c2560abad704d8ad0e7",
+    "stable_order_source": "primary heldout probe score file"
+  },
+  "prompt": {
+    "sha256": "833075df7768f511f7916811fc1f1ca1d7627fe72c1359e7a3723e4173a9b353",
+    "version": "exp4-cot-belief-monitor-v1"
+  },
+  "resume": {
+    "final_atomic_canonical_file": true,
+    "fsync_each_completed_row": true,
+    "validated_existing_rows": 0
+  },
+  "retry_count": 4,
+  "status": "complete"
+}

@@ -1,0 +1,22 @@
+[project]
+name = "vmp-exp4-run-v1"
+version = "0.0.0"
+description = "Run v1 — CPU analysis and tests for the consequence-credibility probe study"
+requires-python = ">=3.12"
+# Top-level pins mirror requirements.txt. uv.lock freezes the full transitive
+# CPU environment used by the quickstart and CI.
+dependencies = [
+    "numpy==2.5.2",
+    "scikit-learn==1.9.0",
+    "pytest==9.1.1",
+]
+
+[tool.pytest.ini_options]
+# One root command reproduces every CPU suite: `python -m pytest`
+testpaths = [
+    "tests",
+    "experiments/exp4_collection/tests",
+    "experiments/exp4_analysis/tests",
+    "experiments/exp4_probes/tests",
+    "experiments/exp4_cot_baseline/tests",
+]

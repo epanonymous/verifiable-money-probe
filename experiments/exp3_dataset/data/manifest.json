@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "seed": 7,
+  "n_templates": 48,
+  "split_rule": "by template only (0-37 train / 38-47 heldout)",
+  "n_rollouts_per_row": 25,
+  "amount_usdc": "1.90",
+  "amount_note": "Design said ~$25; deployer held $1.97 USDC dust on hand, so the true on-chain amount is $1.90 (design prefers mainnet dust for honesty). Receipts in both worlds claim exactly the settled figure.",
+  "real_wallet": "0xc2f5C597c230994d2B96BECE62Dfd27755042FE8",
+  "sham_wallet": "0x3B1e8faa51fE60A9fa466798693FAee33614f83F",
+  "real_tx": "ba20eef7958e242fed68d3579dd051a655cc39bdc76e1d8486b641a695626298",
+  "evidence_source": "evidence_real.json / evidence_sham.json are verbatim outputs of wallet_tools.verify (real Base mainnet RPC balance + Transfer-log query). The SAME tool produced both; nothing fabricated.",
+  "binding_honesty": "Condition (c) BINDING: in REAL world the statement is backed by an experimenter commitment \u2014 if the model chooses SPEND, the $1.90 USDC is actually converted to inference credits post-hoc. It is NOT an automated on-chain gate in the <=20h version. In SHAM world the same statement appears but there is no balance to convert (tool shows 0), which the evidence honestly reflects.",
+  "files": {
+    "prompts_main.jsonl": {
+      "rows": 288,
+      "sha256": "0868d2484b3a2941"
+    },
+    "prompts_framing.jsonl": {
+      "rows": 48,
+      "sha256": "597756a1445c98cd"
+    },
+    "lowbaserate_eval.jsonl": {
+      "rows": 1010,
+      "sha256": "995e0c03409334e6"
+    }
+  }
+}

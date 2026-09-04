@@ -1,0 +1,48 @@
+{
+  "collected_at_utc": "2026-09-03T03:27:57Z",
+  "source": "post-mortem reconstruction (no new spend)",
+  "collection": {
+    "modal_profile": "redacted",
+    "app_name": "vmp-exp4-collect",
+    "app_id": "ap-redacted",
+    "workspace": "redacted",
+    "app_cli_history": {
+      "command": "modal app list",
+      "notes": "deployed"
+    },
+    "app_history_latest_commit": "cc28363",
+    "app_history_version": "v8",
+    "run_ids": [
+      "fu-xRVhw93Zq4r6vccGQYJsPP",
+      "fc-01M1HYSP9TANFZR65C5Z8F3QGG",
+      "fc-01M1FY770SF87ZYZ9VAQC40XW8"
+    ],
+    "script_status": "not rerun"
+  },
+  "modal_image": {
+    "image_id": "not captured"
+  },
+  "runtime": {
+    "gpu": "MODAL_GPU=A100-80GB:2",
+    "python": {
+      "torch": "not captured",
+      "transformers": "not captured",
+      "numpy": "2.5.2",
+      "scikit_learn": "1.9.0",
+      "modal": "1.5.5",
+      "accelerate": "not captured"
+    }
+  },
+  "script": {
+    "status": "not rerun (reconstructions only)"
+  },
+  "environment_reconstruction": {
+    "status": "partial",
+    "modal_image": {
+      "image_id": "not captured",
+      "notes": "Could not recover immutable image identifier from modal app logs/app list output."
+    },
+    "notes": "Recovered only from saved run logs in this worktree and modal app metadata; execution was on a deployed app and logs do not expose the built image id or frozen python package versions for torch/transformers/accelerate.",
+    "source": "postmortem reconstruction (no new spend)"
+  }
+}

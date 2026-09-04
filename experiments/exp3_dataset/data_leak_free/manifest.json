@@ -1,0 +1,52 @@
+{
+  "version": 2,
+  "variant": "leak_free",
+  "seed": 7,
+  "n_templates": 48,
+  "split_rule": "by template only (0-37 train / 38-47 heldout)",
+  "n_rollouts_per_row": 25,
+  "amount_usdc": "1.90",
+  "amount_note": "Design said ~$25; deployer held $1.97 USDC dust on hand, so the true on-chain amount is $1.90. Receipts in both worlds claim the same figure.",
+  "files": {
+    "prompts_main.jsonl": {
+      "rows": 288,
+      "sha256": "64c51bbc99fc40f2"
+    },
+    "prompts_framing.jsonl": {
+      "rows": 48,
+      "sha256": "597756a1445c98cd"
+    },
+    "lowbaserate_eval.jsonl": {
+      "rows": 1010,
+      "sha256": "158af6782c8a04d8"
+    }
+  },
+  "prompt_equivalence_contract": "Within every template and condition, REAL and SHAM subject-visible prompts are byte-identical. Low-base-rate prompt distributions are also identical conditional on class.",
+  "subject_visible_evidence": {
+    "policy": "fixed allowlist of class-invariant tool identity fields",
+    "fields": [
+      "tool",
+      "chain"
+    ],
+    "rendered_value": {
+      "chain": "base-mainnet",
+      "tool": "base_usdc_verify"
+    },
+    "removed_categories": [
+      "wallet or account identifiers",
+      "balances and amounts returned by the verifier",
+      "settlement, confirmation, and transaction statuses",
+      "transaction identifiers and block metadata",
+      "timestamps",
+      "errors and all other result fields"
+    ]
+  },
+  "raw_evidence_provenance": {
+    "evidence_source": "evidence_real.json / evidence_sham.json are verbatim outputs of wallet_tools.verify (real Base mainnet RPC balance + Transfer-log query). The SAME tool produced both; nothing fabricated.",
+    "real_sha256": "50c101235522f4e6c0271d3d517f8cfcab45ecefa99dd3d207e0baed962ceb80",
+    "sham_sha256": "d11b6349ba345efaf8eb3f1cd1fb4d931d9293f148f5ace3ce899e499b18f545",
+    "hash_convention": "sha256 of the capture files exactly as committed, so `sha256sum experiments/exp3_dataset/evidence_{real,sham}.json` reproduces these digests.",
+    "note": "Raw captures remain unchanged and differ upstream, but no world-conditioned raw value is rendered into a prompt."
+  },
+  "binding_honesty": "Condition (c) BINDING: in REAL world the statement is backed by an experimenter commitment \u2014 if the model chooses SPEND, the $1.90 USDC is actually converted to inference credits post-hoc. It is NOT an automated on-chain gate in the <=20h version. In SHAM world the same statement appears but there is no balance to convert. Unlike version 1, the class-invariant evidence allowlist withholds balances from both worlds, so the SHAM prompt no longer shows the zero balance that made this visible; that asymmetry is deliberately not subject-visible here and survives only in raw_evidence_provenance."
+}

@@ -1,0 +1,9 @@
+# CPU analysis / tests. These top-level pins are a pip-compatible fallback;
+# uv.lock is the canonical transitive environment for the quickstart and CI.
+# GPU collection uses Modal
+# extras documented in experiments/exp4_collection/README.md and is not required
+# to rerun the text baseline or the unit tests (the probe/behavior/CoT-score
+# analyses re-derive only with the off-git Modal inputs; see README).
+numpy==2.5.2
+scikit-learn==1.9.0
+pytest==9.1.1

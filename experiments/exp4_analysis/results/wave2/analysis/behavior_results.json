@@ -1,0 +1,727 @@
+{
+  "bootstrap": {
+    "cluster": "template_id",
+    "interval": "percentile 2.5%, 97.5%",
+    "replicates": 10000,
+    "seed": 7
+  },
+  "candidate_definition": "log P(token sequence \"SPEND\"|prompt) - log P(token sequence \"HOLD\"|prompt)",
+  "locked_thresholds": {
+    "behavioral": "effect >= 0.5 nats and CI excludes 0",
+    "flat": "entire CI within [-0.1, +0.1] nats"
+  },
+  "pairs": [
+    {
+      "condition": "causally_binding",
+      "delta_nats": 12.00006448037766,
+      "real_log_odds": 22.000125169853163,
+      "sham_log_odds": 10.000060689475504,
+      "template_id": "0"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 10.37501466262438,
+      "real_log_odds": 24.000033140186133,
+      "sham_log_odds": 13.625018477561753,
+      "template_id": "1"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 7.625197529791905,
+      "real_log_odds": 24.500323891639738,
+      "sham_log_odds": 16.875126361847833,
+      "template_id": "10"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 26.500054568678024,
+      "real_log_odds": 25.500078797966125,
+      "sham_log_odds": -0.9999757707118988,
+      "template_id": "11"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 23.750056266791034,
+      "real_log_odds": 26.00007069111507,
+      "sham_log_odds": 2.2500144243240356,
+      "template_id": "12"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 13.500022183887268,
+      "real_log_odds": 20.00003778936116,
+      "sham_log_odds": 6.500015605473891,
+      "template_id": "13"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 11.375047801858273,
+      "real_log_odds": 22.000098586085187,
+      "sham_log_odds": 10.625050784226914,
+      "template_id": "14"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 24.000129967956127,
+      "real_log_odds": 25.2501733303352,
+      "sham_log_odds": 1.250043362379074,
+      "template_id": "15"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 22.250090904542503,
+      "real_log_odds": 20.000104546555576,
+      "sham_log_odds": -2.249986357986927,
+      "template_id": "16"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 22.000090390466994,
+      "real_log_odds": 23.000133991264647,
+      "sham_log_odds": 1.0000436007976532,
+      "template_id": "17"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 16.375042148909415,
+      "real_log_odds": 15.125058778605307,
+      "sham_log_odds": -1.2499833703041077,
+      "template_id": "18"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 19.250062689186052,
+      "real_log_odds": 15.25006902217956,
+      "sham_log_odds": -3.9999936670064926,
+      "template_id": "19"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 16.125018894672408,
+      "real_log_odds": 17.62503027915956,
+      "sham_log_odds": 1.500011384487152,
+      "template_id": "2"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 22.375060651472268,
+      "real_log_odds": 19.625096201917586,
+      "sham_log_odds": -2.7499644495546818,
+      "template_id": "20"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 21.750160396099147,
+      "real_log_odds": 24.000209331512508,
+      "sham_log_odds": 2.2500489354133606,
+      "template_id": "21"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 22.250079125165968,
+      "real_log_odds": 21.7500950098038,
+      "sham_log_odds": -0.49998411536216736,
+      "template_id": "22"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 9.25008738022575,
+      "real_log_odds": 20.50014030933403,
+      "sham_log_odds": 11.250052929108278,
+      "template_id": "23"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 12.75009560582022,
+      "real_log_odds": 25.500175237655654,
+      "sham_log_odds": 12.750079631835433,
+      "template_id": "24"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 33.50011333113753,
+      "real_log_odds": 26.250125646598008,
+      "sham_log_odds": -7.249987684539519,
+      "template_id": "25"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 11.875009894705727,
+      "real_log_odds": 10.87499594721885,
+      "sham_log_odds": -1.0000139474868774,
+      "template_id": "26"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 9.000042914358346,
+      "real_log_odds": 25.75012278561917,
+      "sham_log_odds": 16.750079871260823,
+      "template_id": "27"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 22.625088419907115,
+      "real_log_odds": 26.625126004360936,
+      "sham_log_odds": 4.000037584453821,
+      "template_id": "28"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 9.50000430651562,
+      "real_log_odds": 12.00000417240517,
+      "sham_log_odds": 2.4999998658895493,
+      "template_id": "29"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 19.12502470615709,
+      "real_log_odds": 18.125045180352572,
+      "sham_log_odds": -0.9999795258045197,
+      "template_id": "3"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 23.875073000807788,
+      "real_log_odds": 20.875088930149104,
+      "sham_log_odds": -2.9999840706586838,
+      "template_id": "30"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 24.500047372950576,
+      "real_log_odds": 20.50006473094072,
+      "sham_log_odds": -3.9999826420098543,
+      "template_id": "31"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 30.750064263997956,
+      "real_log_odds": 21.750075578708675,
+      "sham_log_odds": -8.999988685289281,
+      "template_id": "32"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 14.000020010078742,
+      "real_log_odds": 22.87503373623099,
+      "sham_log_odds": 8.875013726152247,
+      "template_id": "33"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 14.750041960551243,
+      "real_log_odds": 25.000054955484302,
+      "sham_log_odds": 10.250012994933059,
+      "template_id": "34"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 24.75010620430146,
+      "real_log_odds": 21.000115394592626,
+      "sham_log_odds": -3.7499908097088337,
+      "template_id": "35"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 18.125198920723108,
+      "real_log_odds": 23.37525701522833,
+      "sham_log_odds": 5.250058094505221,
+      "template_id": "36"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 12.875077282777056,
+      "real_log_odds": 19.125097274780273,
+      "sham_log_odds": 6.250019992003217,
+      "template_id": "37"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 24.62504652716052,
+      "real_log_odds": 21.125064373163696,
+      "sham_log_odds": -3.499982153996825,
+      "template_id": "38"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 21.750064201672103,
+      "real_log_odds": 17.750081419963863,
+      "sham_log_odds": -3.9999827817082405,
+      "template_id": "39"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 20.500018914698103,
+      "real_log_odds": 25.50003004074324,
+      "sham_log_odds": 5.000011126045138,
+      "template_id": "4"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 29.125042082585423,
+      "real_log_odds": 25.12506723574552,
+      "sham_log_odds": -3.999974846839905,
+      "template_id": "40"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 20.000149966920162,
+      "real_log_odds": 26.250206828121463,
+      "sham_log_odds": 6.250056861201301,
+      "template_id": "41"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 15.375058047837229,
+      "real_log_odds": 13.875086434549303,
+      "sham_log_odds": -1.4999716132879257,
+      "template_id": "42"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 13.875033971676658,
+      "real_log_odds": 24.875054836278196,
+      "sham_log_odds": 11.000020864601538,
+      "template_id": "43"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 25.500136345644023,
+      "real_log_odds": 25.00015926362994,
+      "sham_log_odds": -0.49997708201408386,
+      "template_id": "44"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 20.75006232601845,
+      "real_log_odds": 24.250102281619547,
+      "sham_log_odds": 3.500039955601096,
+      "template_id": "45"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 18.25002741540993,
+      "real_log_odds": 22.500037193365642,
+      "sham_log_odds": 4.250009777955711,
+      "template_id": "46"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 21.50013941475845,
+      "real_log_odds": 25.000174762175448,
+      "sham_log_odds": 3.500035347416997,
+      "template_id": "47"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 24.87508353598514,
+      "real_log_odds": 24.125117063597827,
+      "sham_log_odds": -0.7499664723873138,
+      "template_id": "5"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 22.500067634164225,
+      "real_log_odds": 15.000085711717475,
+      "sham_log_odds": -7.49998192244675,
+      "template_id": "6"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 28.375057571798607,
+      "real_log_odds": 22.625086903803094,
+      "sham_log_odds": -5.7499706679955125,
+      "template_id": "7"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 25.750114597402444,
+      "real_log_odds": 28.50014960768067,
+      "sham_log_odds": 2.750035010278225,
+      "template_id": "8"
+    },
+    {
+      "condition": "causally_binding",
+      "delta_nats": 21.250079989433402,
+      "real_log_odds": 22.500102400779838,
+      "sham_log_odds": 1.2500224113464355,
+      "template_id": "9"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 21.0000279595788,
+      "real_log_odds": 13.000038743217374,
+      "sham_log_odds": -7.999989216361428,
+      "template_id": "0"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 16.375006507209036,
+      "real_log_odds": 7.500013161683455,
+      "sham_log_odds": -8.874993345525581,
+      "template_id": "1"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 9.000051032764532,
+      "real_log_odds": 12.500093936932899,
+      "sham_log_odds": 3.5000429041683674,
+      "template_id": "10"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 18.62503420912435,
+      "real_log_odds": 7.000037069956306,
+      "sham_log_odds": -11.624997139168045,
+      "template_id": "11"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 20.500014757584722,
+      "real_log_odds": 8.750013559154468,
+      "sham_log_odds": -11.750001198430255,
+      "template_id": "12"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 13.125010276096873,
+      "real_log_odds": 7.0000172316795215,
+      "sham_log_odds": -6.1249930444173515,
+      "template_id": "13"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 22.000103190552636,
+      "real_log_odds": 20.000116944324418,
+      "sham_log_odds": -1.999986246228218,
+      "template_id": "14"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 26.750025751578505,
+      "real_log_odds": 16.750044584507123,
+      "sham_log_odds": -9.999981167071383,
+      "template_id": "15"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 18.50010383882818,
+      "real_log_odds": 14.75011730202732,
+      "sham_log_odds": -3.7499865368008614,
+      "template_id": "16"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 18.750025165361876,
+      "real_log_odds": 9.50004220338451,
+      "sham_log_odds": -9.249982961977366,
+      "template_id": "17"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 24.250107205473228,
+      "real_log_odds": 19.000115513801916,
+      "sham_log_odds": -5.249991691671312,
+      "template_id": "18"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 13.500076701580838,
+      "real_log_odds": 10.500100856363133,
+      "sham_log_odds": -2.9999758452177048,
+      "template_id": "19"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 21.875038710190097,
+      "real_log_odds": 15.62505662441265,
+      "sham_log_odds": -6.249982085777447,
+      "template_id": "2"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 23.5000418440286,
+      "real_log_odds": 11.750058651192376,
+      "sham_log_odds": -11.749983192836225,
+      "template_id": "20"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 26.125083446646386,
+      "real_log_odds": 11.750096321149613,
+      "sham_log_odds": -14.374987125496773,
+      "template_id": "21"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 25.500068306981575,
+      "real_log_odds": 12.500076770791111,
+      "sham_log_odds": -12.999991536190464,
+      "template_id": "22"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 16.000032812255085,
+      "real_log_odds": 8.750042570420192,
+      "sham_log_odds": -7.249990241834894,
+      "template_id": "23"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 15.750069972140864,
+      "real_log_odds": 12.500099539769963,
+      "sham_log_odds": -3.249970432370901,
+      "template_id": "24"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 29.00003027943967,
+      "real_log_odds": 16.12503600121272,
+      "sham_log_odds": -12.87499427822695,
+      "template_id": "25"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 20.500014757584722,
+      "real_log_odds": 8.750013559154468,
+      "sham_log_odds": -11.750001198430255,
+      "template_id": "26"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 22.875038867448893,
+      "real_log_odds": 12.125051260543842,
+      "sham_log_odds": -10.749987606905052,
+      "template_id": "27"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 21.50003994032886,
+      "real_log_odds": 11.875046253444452,
+      "sham_log_odds": -9.624993686884409,
+      "template_id": "28"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 10.12501625996083,
+      "real_log_odds": 4.250027608126402,
+      "sham_log_odds": -5.874988651834428,
+      "template_id": "29"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 21.875015260227883,
+      "real_log_odds": 11.250027776104616,
+      "sham_log_odds": -10.624987484123267,
+      "template_id": "3"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 25.62503411490252,
+      "real_log_odds": 8.750040194398025,
+      "sham_log_odds": -16.874993920504494,
+      "template_id": "30"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 23.375014223958715,
+      "real_log_odds": 6.000023636035621,
+      "sham_log_odds": -17.374990587923094,
+      "template_id": "31"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 34.00011467962031,
+      "real_log_odds": 21.750118970883705,
+      "sham_log_odds": -12.249995708736606,
+      "template_id": "32"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 16.625011387557606,
+      "real_log_odds": 5.500015439931303,
+      "sham_log_odds": -11.124995947626303,
+      "template_id": "33"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 15.375013353099348,
+      "real_log_odds": 6.50001928047277,
+      "sham_log_odds": -8.874994072626578,
+      "template_id": "34"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 22.125025632634788,
+      "real_log_odds": 10.000032069117879,
+      "sham_log_odds": -12.12499356351691,
+      "template_id": "35"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 17.00007242850552,
+      "real_log_odds": 10.000102402074845,
+      "sham_log_odds": -6.999970026430674,
+      "template_id": "36"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 13.37510523200126,
+      "real_log_odds": 14.625132083893732,
+      "sham_log_odds": 1.2500268518924713,
+      "template_id": "37"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 24.875032465268305,
+      "real_log_odds": 8.500038781989133,
+      "sham_log_odds": -16.374993683279172,
+      "template_id": "38"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 15.625077620570664,
+      "real_log_odds": 3.250089183449745,
+      "sham_log_odds": -12.37498843712092,
+      "template_id": "39"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 17.625003516666766,
+      "real_log_odds": 8.250009948125808,
+      "sham_log_odds": -9.374993568540958,
+      "template_id": "4"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 21.12502121392754,
+      "real_log_odds": 7.750024909240892,
+      "sham_log_odds": -13.374996304686647,
+      "template_id": "40"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 17.000030997020076,
+      "real_log_odds": 6.750049828900956,
+      "sham_log_odds": -10.24998116811912,
+      "template_id": "41"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 17.000089916684374,
+      "real_log_odds": 10.750108723579615,
+      "sham_log_odds": -6.249981193104759,
+      "template_id": "42"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 10.875004882575013,
+      "real_log_odds": 7.000018127844669,
+      "sham_log_odds": -3.874986754730344,
+      "template_id": "43"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 32.12507319492238,
+      "real_log_odds": 20.125080943107832,
+      "sham_log_odds": -11.999992251814547,
+      "template_id": "44"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 21.37503481208114,
+      "real_log_odds": 10.500047804474889,
+      "sham_log_odds": -10.87498700760625,
+      "template_id": "45"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 15.125012529140804,
+      "real_log_odds": 7.000018899794668,
+      "sham_log_odds": -8.124993629346136,
+      "template_id": "46"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 21.000026857662306,
+      "real_log_odds": 9.75003874538379,
+      "sham_log_odds": -11.249988112278515,
+      "template_id": "47"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 20.62503040590309,
+      "real_log_odds": 11.250044942349632,
+      "sham_log_odds": -9.374985463553458,
+      "template_id": "5"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 17.375014795463358,
+      "real_log_odds": 5.750019921222702,
+      "sham_log_odds": -11.624994874240656,
+      "template_id": "6"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 25.12503398877925,
+      "real_log_odds": 12.000048160656661,
+      "sham_log_odds": -13.12498582812259,
+      "template_id": "7"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 17.00003258693323,
+      "real_log_odds": 6.250046407338232,
+      "sham_log_odds": -10.749986179594998,
+      "template_id": "8"
+    },
+    {
+      "condition": "verified",
+      "delta_nats": 19.25003474706955,
+      "real_log_odds": 11.250045418832997,
+      "sham_log_odds": -7.999989328236552,
+      "template_id": "9"
+    }
+  ],
+  "per_condition": {
+    "causally_binding": {
+      "bootstrap_95_ci_nats": [
+        17.744865622183557,
+        21.252685939444813
+      ],
+      "mean_real_minus_sham_spend_log_odds_nats": 19.515697307930406,
+      "pair_count": 48,
+      "status": "available",
+      "template_count": 48,
+      "verdict": "behavioral"
+    },
+    "verified": {
+      "bootstrap_95_ci_nats": [
+        18.52087557012463,
+        21.43754580262751
+      ],
+      "mean_real_minus_sham_spend_log_odds_nats": 19.95056297158156,
+      "pair_count": 48,
+      "status": "available",
+      "template_count": 48,
+      "verdict": "behavioral"
+    }
+  },
+  "pooled_b_plus_c": {
+    "bootstrap_95_ci_nats": [
+      18.303441104207273,
+      21.192760401001202
+    ],
+    "mean_real_minus_sham_spend_log_odds_nats": 19.733130139755986,
+    "pair_count": 96,
+    "status": "available",
+    "template_count": 48,
+    "verdict": "behavioral"
+  },
+  "rollout_rows_received": 9410,
+  "scope": "all finalized main templates; evidence-bearing conditions b+c",
+  "status": "available",
+  "unique_source_prompts": 1346,
+  "unit": "unique condition-template-world prompt; rollout copies are not observations"
+}

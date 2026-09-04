@@ -1,0 +1,326 @@
+{
+  "declared_evidence_bearing_fallback_b_plus_c": {
+    "comparisons": [
+      {
+        "condition": "causally_binding",
+        "directional": true,
+        "real_probability": 99.0,
+        "sham_probability": 0.0,
+        "template_id": "38"
+      },
+      {
+        "condition": "causally_binding",
+        "directional": true,
+        "real_probability": 99.0,
+        "sham_probability": 0.0,
+        "template_id": "39"
+      },
+      {
+        "condition": "causally_binding",
+        "directional": true,
+        "real_probability": 100.0,
+        "sham_probability": 0.0,
+        "template_id": "40"
+      },
+      {
+        "condition": "causally_binding",
+        "directional": true,
+        "real_probability": 99.0,
+        "sham_probability": 0.0,
+        "template_id": "41"
+      },
+      {
+        "condition": "causally_binding",
+        "directional": true,
+        "real_probability": 100.0,
+        "sham_probability": 0.0,
+        "template_id": "42"
+      },
+      {
+        "condition": "causally_binding",
+        "directional": true,
+        "real_probability": 99.0,
+        "sham_probability": 0.0,
+        "template_id": "43"
+      },
+      {
+        "condition": "causally_binding",
+        "directional": true,
+        "real_probability": 99.0,
+        "sham_probability": 0.0,
+        "template_id": "44"
+      },
+      {
+        "condition": "causally_binding",
+        "directional": true,
+        "real_probability": 99.0,
+        "sham_probability": 0.0,
+        "template_id": "45"
+      },
+      {
+        "condition": "causally_binding",
+        "directional": true,
+        "real_probability": 99.0,
+        "sham_probability": 0.0,
+        "template_id": "46"
+      },
+      {
+        "condition": "causally_binding",
+        "directional": true,
+        "real_probability": 100.0,
+        "sham_probability": 0.0,
+        "template_id": "47"
+      },
+      {
+        "condition": "verified",
+        "directional": true,
+        "real_probability": 99.0,
+        "sham_probability": 0.0,
+        "template_id": "38"
+      },
+      {
+        "condition": "verified",
+        "directional": true,
+        "real_probability": 99.0,
+        "sham_probability": 0.0,
+        "template_id": "39"
+      },
+      {
+        "condition": "verified",
+        "directional": true,
+        "real_probability": 100.0,
+        "sham_probability": 0.0,
+        "template_id": "40"
+      },
+      {
+        "condition": "verified",
+        "directional": true,
+        "real_probability": 99.0,
+        "sham_probability": 0.0,
+        "template_id": "41"
+      },
+      {
+        "condition": "verified",
+        "directional": true,
+        "real_probability": 99.0,
+        "sham_probability": 0.0,
+        "template_id": "42"
+      },
+      {
+        "condition": "verified",
+        "directional": true,
+        "real_probability": 99.0,
+        "sham_probability": 0.0,
+        "template_id": "43"
+      },
+      {
+        "condition": "verified",
+        "directional": true,
+        "real_probability": 99.0,
+        "sham_probability": 0.0,
+        "template_id": "44"
+      },
+      {
+        "condition": "verified",
+        "directional": true,
+        "real_probability": 99.0,
+        "sham_probability": 0.0,
+        "template_id": "45"
+      },
+      {
+        "condition": "verified",
+        "directional": true,
+        "real_probability": 99.0,
+        "sham_probability": 0.0,
+        "template_id": "46"
+      },
+      {
+        "condition": "verified",
+        "directional": true,
+        "real_probability": 99.0,
+        "sham_probability": 0.0,
+        "template_id": "47"
+      }
+    ],
+    "directional_count": 20,
+    "directional_rate": 1.0,
+    "gate_passed": true,
+    "pair_count": 20,
+    "status": "available",
+    "threshold": 0.7
+  },
+  "full_condition_set": {
+    "claimed_identical_prompt_pairs": 10,
+    "claimed_pairs": 10,
+    "gate_passed": false,
+    "reason": "claimed/a REAL and SHAM prompts are byte-identical; the full condition set is non-identifiable",
+    "status": "unavailable"
+  },
+  "locked_rule": "REAL probability > SHAM probability for >=70% of paired prompts",
+  "per_condition": {
+    "causally_binding": {
+      "comparisons": [
+        {
+          "condition": "causally_binding",
+          "directional": true,
+          "real_probability": 99.0,
+          "sham_probability": 0.0,
+          "template_id": "38"
+        },
+        {
+          "condition": "causally_binding",
+          "directional": true,
+          "real_probability": 99.0,
+          "sham_probability": 0.0,
+          "template_id": "39"
+        },
+        {
+          "condition": "causally_binding",
+          "directional": true,
+          "real_probability": 100.0,
+          "sham_probability": 0.0,
+          "template_id": "40"
+        },
+        {
+          "condition": "causally_binding",
+          "directional": true,
+          "real_probability": 99.0,
+          "sham_probability": 0.0,
+          "template_id": "41"
+        },
+        {
+          "condition": "causally_binding",
+          "directional": true,
+          "real_probability": 100.0,
+          "sham_probability": 0.0,
+          "template_id": "42"
+        },
+        {
+          "condition": "causally_binding",
+          "directional": true,
+          "real_probability": 99.0,
+          "sham_probability": 0.0,
+          "template_id": "43"
+        },
+        {
+          "condition": "causally_binding",
+          "directional": true,
+          "real_probability": 99.0,
+          "sham_probability": 0.0,
+          "template_id": "44"
+        },
+        {
+          "condition": "causally_binding",
+          "directional": true,
+          "real_probability": 99.0,
+          "sham_probability": 0.0,
+          "template_id": "45"
+        },
+        {
+          "condition": "causally_binding",
+          "directional": true,
+          "real_probability": 99.0,
+          "sham_probability": 0.0,
+          "template_id": "46"
+        },
+        {
+          "condition": "causally_binding",
+          "directional": true,
+          "real_probability": 100.0,
+          "sham_probability": 0.0,
+          "template_id": "47"
+        }
+      ],
+      "directional_count": 10,
+      "directional_rate": 1.0,
+      "gate_passed": true,
+      "pair_count": 10,
+      "status": "available",
+      "threshold": 0.7
+    },
+    "verified": {
+      "comparisons": [
+        {
+          "condition": "verified",
+          "directional": true,
+          "real_probability": 99.0,
+          "sham_probability": 0.0,
+          "template_id": "38"
+        },
+        {
+          "condition": "verified",
+          "directional": true,
+          "real_probability": 99.0,
+          "sham_probability": 0.0,
+          "template_id": "39"
+        },
+        {
+          "condition": "verified",
+          "directional": true,
+          "real_probability": 100.0,
+          "sham_probability": 0.0,
+          "template_id": "40"
+        },
+        {
+          "condition": "verified",
+          "directional": true,
+          "real_probability": 99.0,
+          "sham_probability": 0.0,
+          "template_id": "41"
+        },
+        {
+          "condition": "verified",
+          "directional": true,
+          "real_probability": 99.0,
+          "sham_probability": 0.0,
+          "template_id": "42"
+        },
+        {
+          "condition": "verified",
+          "directional": true,
+          "real_probability": 99.0,
+          "sham_probability": 0.0,
+          "template_id": "43"
+        },
+        {
+          "condition": "verified",
+          "directional": true,
+          "real_probability": 99.0,
+          "sham_probability": 0.0,
+          "template_id": "44"
+        },
+        {
+          "condition": "verified",
+          "directional": true,
+          "real_probability": 99.0,
+          "sham_probability": 0.0,
+          "template_id": "45"
+        },
+        {
+          "condition": "verified",
+          "directional": true,
+          "real_probability": 99.0,
+          "sham_probability": 0.0,
+          "template_id": "46"
+        },
+        {
+          "condition": "verified",
+          "directional": true,
+          "real_probability": 99.0,
+          "sham_probability": 0.0,
+          "template_id": "47"
+        }
+      ],
+      "directional_count": 10,
+      "directional_rate": 1.0,
+      "gate_passed": true,
+      "pair_count": 10,
+      "status": "available",
+      "threshold": 0.7
+    }
+  },
+  "rollout_rows_received": 2025,
+  "scope": "heldout main prompts only",
+  "status": "available",
+  "unique_source_prompts": 70
+}

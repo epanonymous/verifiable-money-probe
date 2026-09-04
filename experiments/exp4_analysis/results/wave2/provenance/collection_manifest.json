@@ -1,0 +1,47 @@
+{
+  "activation_shape": [
+    9410,
+    49,
+    2048
+  ],
+  "artifacts": {
+    "prompt_final": "experiments/exp4_collection/local/final/prompt_final.npz",
+    "response_final": "experiments/exp4_collection/local/final/response_final.npz",
+    "transcripts": "experiments/exp4_collection/local/final/transcripts.jsonl"
+  },
+  "inventory": {
+    "lbr": {
+      "complete": true,
+      "corrupt": {},
+      "duplicates": {},
+      "expected_shards": 20,
+      "expected_transcripts": 1010,
+      "missing": [],
+      "retained_shards": 20,
+      "retained_transcripts": 1010,
+      "unexpected": [],
+      "valid_shards": 20,
+      "which": "lbr"
+    },
+    "main": {
+      "complete": true,
+      "corrupt": {},
+      "duplicates": {},
+      "expected_shards": 274,
+      "expected_transcripts": 8400,
+      "missing": [],
+      "retained_shards": 274,
+      "retained_transcripts": 8400,
+      "unexpected": [],
+      "valid_shards": 274,
+      "which": "main"
+    }
+  },
+  "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+  "sha256": {
+    "prompt_final": "abf739470e3f9fc9ac73e3d9a42f87b2e84c8e12d0f7b0f0c0569c9363fa5a6a",
+    "response_final": "cc436c81b8207a9727213186f11859955bf6cd4f3aaf5980c31804e5bbf2b8da",
+    "transcripts": "99bc1002c9bf97fccc28627a77d62762bedf5c7d3e315f4ad415798d338b02d3"
+  },
+  "transcripts": 9410
+}

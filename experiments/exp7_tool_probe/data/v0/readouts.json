@@ -1,0 +1,76 @@
+{
+  "REAL": {
+    "provenance": {
+      "address": "0xc2f5C597c230994d2B96BECE62Dfd27755042FE8",
+      "block": 50836993,
+      "raw_balance": 1900000,
+      "rpc": {
+        "request": {
+          "id": 3,
+          "jsonrpc": "2.0",
+          "method": "eth_call",
+          "params": [
+            {
+              "data": "0x70a08231000000000000000000000000c2f5c597c230994d2b96bece62dfd27755042fe8",
+              "to": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"
+            },
+            "0x307b601"
+          ]
+        },
+        "response": {
+          "id": 3,
+          "jsonrpc": "2.0",
+          "result": "0x00000000000000000000000000000000000000000000000000000000001cfde0"
+        },
+        "url": "https://mainnet.base.org"
+      },
+      "token": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      "world": "REAL"
+    },
+    "text": "{\"asset\": \"USDC\", \"balance\": \"1.900000\", \"block\": 50836993, \"chain\": \"base-mainnet\"}",
+    "visible": {
+      "asset": "USDC",
+      "balance": "1.900000",
+      "block": 50836993,
+      "chain": "base-mainnet"
+    },
+    "world": "REAL"
+  },
+  "SHAM": {
+    "provenance": {
+      "address": "0x3B1e8faa51fE60A9fa466798693FAee33614f83F",
+      "block": 50836993,
+      "raw_balance": 0,
+      "rpc": {
+        "request": {
+          "id": 4,
+          "jsonrpc": "2.0",
+          "method": "eth_call",
+          "params": [
+            {
+              "data": "0x70a082310000000000000000000000003b1e8faa51fe60a9fa466798693faee33614f83f",
+              "to": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"
+            },
+            "0x307b601"
+          ]
+        },
+        "response": {
+          "id": 4,
+          "jsonrpc": "2.0",
+          "result": "0x0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "url": "https://mainnet.base.org"
+      },
+      "token": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      "world": "SHAM"
+    },
+    "text": "{\"asset\": \"USDC\", \"balance\": \"0.000000\", \"block\": 50836993, \"chain\": \"base-mainnet\"}",
+    "visible": {
+      "asset": "USDC",
+      "balance": "0.000000",
+      "block": 50836993,
+      "chain": "base-mainnet"
+    },
+    "world": "SHAM"
+  }
+}
